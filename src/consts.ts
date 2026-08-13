@@ -10,21 +10,26 @@ export interface Testimonial {
 	title: string;
 }
 
-export const BRANDS: string[] = [
-	'Disney',
-	'Meta',
-	'Best Buy Health',
-	'Dior',
-	'Square Enix',
-	'Ubisoft',
-	'DirecTV',
-	'VMware',
-	'Ripple Labs',
-	'GAIN Credit',
-	'GoFundMe',
-	'Colgate',
-	'Yahoo',
-	'American Medical Response',
+export interface Brand {
+	name: string;
+	logo?: string;
+}
+
+export const BRANDS: Brand[] = [
+	{ name: 'Disney', logo: 'disney.svg' },
+	{ name: 'Meta', logo: 'meta.svg' },
+	{ name: 'Best Buy Health', logo: 'best-buy.svg' },
+	{ name: 'Dior', logo: 'dior.svg' },
+	{ name: 'Square Enix', logo: 'square-enix.svg' },
+	{ name: 'Ubisoft', logo: 'ubisoft.svg' },
+	{ name: 'DirecTV', logo: 'directv.svg' },
+	{ name: 'VMware', logo: 'vmware.svg' },
+	{ name: 'Ripple Labs', logo: 'ripple.svg' },
+	{ name: 'GAIN Credit' },
+	{ name: 'GoFundMe', logo: 'gofundme.svg' },
+	{ name: 'Colgate', logo: 'colgate.svg' },
+	{ name: 'Yahoo', logo: 'yahoo.svg' },
+	{ name: 'American Medical Response' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
