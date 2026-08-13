@@ -1,20 +1,20 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	--accent: #4f46e5;
+	--accent-2: #7c3aed;
+	--accent-soft: 79, 70, 229;
+	--black: 15, 23, 42;
+	--gray: 100, 116, 139;
+	--gray-light: 226, 232, 240;
+	--gray-dark: 30, 41, 59;
+	--surface: 248, 250, 252;
+	--gray-gradient: rgba(var(--surface), 80%), #fff;
+	--dark-1: #0b0f1e;
+	--dark-2: #151c33;
+	--radius: 16px;
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+		0 1px 2px rgba(15, 23, 42, 6%),
+		0 8px 24px rgba(15, 23, 42, 8%),
+		0 24px 48px rgba(15, 23, 42, 8%);
 }
 body {
 	font-family: var(--font-atkinson);
@@ -26,8 +26,9 @@ body {
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
-	font-size: 20px;
-	line-height: 1.7;
+	font-size: 19px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
 }
 main {
 	width: 720px;
@@ -43,22 +44,23 @@ h5,
 h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
-	line-height: 1.2;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
 }
 h1 {
-	font-size: 3.052em;
+	font-size: 2.9em;
 }
 h2 {
-	font-size: 2.441em;
+	font-size: 2.1em;
 }
 h3 {
-	font-size: 1.953em;
+	font-size: 1.7em;
 }
 h4 {
-	font-size: 1.563em;
+	font-size: 1.4em;
 }
 h5 {
-	font-size: 1.25em;
+	font-size: 1.15em;
 }
 strong,
 b {
@@ -68,13 +70,13 @@ a {
 	color: var(--accent);
 }
 a:hover {
-	color: var(--accent);
+	color: var(--accent-2);
 }
 p {
 	margin-bottom: 1em;
 }
 .prose p {
-	margin-bottom: 2em;
+	margin-bottom: 1.6em;
 }
 textarea {
 	width: 100%;
@@ -115,10 +117,13 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
+		font-size: 17px;
 	}
 	main {
 		padding: 1em;
+	}
+	h1 {
+		font-size: 2.2em;
 	}
 }
 
@@ -130,12 +135,212 @@ hr {
 	height: 1px;
 	width: 1px;
 	overflow: hidden;
-	/* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
 	clip: rect(1px 1px 1px 1px);
-	/* maybe deprecated but we need to support legacy browsers */
 	clip: rect(1px, 1px, 1px, 1px);
-	/* modern browsers, clip-path works inwards from each corner */
 	clip-path: inset(50%);
-	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+/* --- Shared design-system utilities --- */
+
+.eyebrow {
+	margin: 0 0 0.5em 0;
+	color: var(--accent);
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.85rem;
+	font-weight: 700;
+}
+
+.gradient-text {
+	background: linear-gradient(100deg, var(--accent), var(--accent-2));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.wide {
+	width: 960px;
+	max-width: calc(100% - 2em);
+	margin: auto;
+}
+
+.hero-dark {
+	position: relative;
+	background: radial-gradient(circle at 15% 20%, rgba(124, 58, 237, 0.35), transparent 45%),
+		radial-gradient(circle at 85% 0%, rgba(79, 70, 229, 0.35), transparent 40%), var(--dark-1);
+	background-color: var(--dark-1);
+	color: rgba(255, 255, 255, 0.92);
+	overflow: hidden;
+}
+.hero-dark::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+	background-size: 42px 42px;
+	mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+	pointer-events: none;
+}
+.hero-dark h1,
+.hero-dark h2 {
+	color: #fff;
+}
+.hero-dark .eyebrow {
+	color: #a5b4fc;
+}
+.hero-dark p {
+	color: rgba(255, 255, 255, 0.75);
+}
+.hero-dark a:not(.btn) {
+	color: #a5b4fc;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 0.7em 1.4em;
+	border-radius: 999px;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 0.95rem;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+	border: 1px solid transparent;
+}
+.btn:hover {
+	transform: translateY(-1px);
+}
+.btn-primary {
+	background: linear-gradient(100deg, var(--accent), var(--accent-2));
+	color: #fff !important;
+	box-shadow: 0 8px 20px rgba(var(--accent-soft), 35%);
+}
+.btn-ghost {
+	border-color: rgba(255, 255, 255, 0.25);
+	color: #fff !important;
+}
+.btn-ghost:hover {
+	border-color: rgba(255, 255, 255, 0.5);
+}
+.btn-outline {
+	border-color: rgb(var(--gray-light));
+	color: rgb(var(--black)) !important;
+}
+.btn-outline:hover {
+	border-color: var(--accent);
+}
+
+.card {
+	background: #fff;
+	border: 1px solid rgb(var(--gray-light));
+	border-radius: var(--radius);
+	padding: 1.75em;
+	transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+a.card {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+a.card:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--box-shadow);
+	border-color: rgba(var(--accent-soft), 40%);
+}
+
+.badge {
+	display: inline-block;
+	padding: 0.3em 0.8em;
+	border-radius: 999px;
+	background: rgba(var(--accent-soft), 10%);
+	color: var(--accent);
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+.stat-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1.5em;
+}
+.stat-grid .stat strong {
+	display: block;
+	font-size: 2rem;
+	font-weight: 800;
+	background: linear-gradient(100deg, #a5b4fc, #c4b5fd);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.stat-grid .stat span {
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 0.85rem;
+}
+@media (max-width: 720px) {
+	.stat-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.avatar-ring {
+	border-radius: 999px;
+	padding: 4px;
+	background: linear-gradient(135deg, var(--accent), var(--accent-2));
+	display: inline-flex;
+}
+.avatar-ring img {
+	border-radius: 999px;
+	display: block;
+	border: 3px solid #fff;
+}
+
+.quote-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5em;
+}
+@media (max-width: 720px) {
+	.quote-grid {
+		grid-template-columns: 1fr;
+	}
+}
+.quote-card {
+	background: #fff;
+	border: 1px solid rgb(var(--gray-light));
+	border-radius: var(--radius);
+	padding: 1.75em;
+}
+.quote-card p.quote {
+	font-size: 1.05rem;
+	color: rgb(var(--gray-dark));
+	margin-bottom: 1em;
+}
+.quote-card p.quote::before {
+	content: '\201C';
+	color: var(--accent);
+	font-weight: 800;
+}
+.quote-card .attribution {
+	font-weight: 700;
+	color: rgb(var(--black));
+	font-size: 0.9rem;
+}
+.quote-card .attribution span {
+	display: block;
+	font-weight: 400;
+	color: rgb(var(--gray));
+	font-size: 0.85rem;
+}
+
+section {
+	padding: 4em 0;
+}
+@media (max-width: 720px) {
+	section {
+		padding: 2.5em 0;
+	}
 }

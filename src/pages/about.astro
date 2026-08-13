@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/photos/aaron-amerling.jpg';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -12,15 +14,25 @@ import Header from '../components/Header.astro';
 			description="Growth marketing leader with a background in storytelling, product, and applied AI."
 		/>
 		<style>
+			.about-hero {
+				display: flex;
+				align-items: center;
+				gap: 2em;
+				margin-bottom: 1em;
+			}
+			.about-hero :global(img) {
+				width: 120px;
+				height: 120px;
+				object-fit: cover;
+				border-radius: 999px;
+				flex-shrink: 0;
+			}
 			main {
 				width: 720px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
+				padding: 3em 1em;
 				color: rgb(var(--gray-dark));
-			}
-			h1 {
-				color: rgb(var(--black));
 			}
 			h2 {
 				color: rgb(var(--black));
@@ -32,12 +44,26 @@ import Header from '../components/Header.astro';
 			li {
 				margin-bottom: 0.4em;
 			}
+			@media (max-width: 560px) {
+				.about-hero {
+					flex-direction: column;
+					text-align: center;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>About</h1>
+			<div class="about-hero">
+				<div class="avatar-ring">
+					<Image src={headshot} alt="Aaron Amerling" width={120} height={120} />
+				</div>
+				<div>
+					<p class="eyebrow">About</p>
+					<h1>Aaron Amerling</h1>
+				</div>
+			</div>
 
 			<p>
 				I'm a growth marketing leader who owns the number, not just the channel. I build

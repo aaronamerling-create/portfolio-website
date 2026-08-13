@@ -31,10 +31,6 @@ const { title, client, summary, challenge, solution, results } = data;
 			}
 			.client {
 				margin: 0 0 0.5em 0;
-				color: rgb(var(--gray));
-				font-size: 0.9rem;
-				text-transform: uppercase;
-				letter-spacing: 0.04em;
 			}
 			h1 {
 				margin: 0 0 0.5em 0;
@@ -42,20 +38,35 @@ const { title, client, summary, challenge, solution, results } = data;
 			}
 			.summary {
 				font-size: 1.2rem;
+				color: rgb(var(--gray-dark));
 			}
 			h2 {
 				color: rgb(var(--black));
 				margin-top: 2em;
 			}
 			ul.results {
-				padding-left: 1.2em;
+				padding-left: 0;
+				list-style: none;
 			}
 			ul.results li {
-				margin-bottom: 0.5em;
+				position: relative;
+				padding-left: 1.6em;
+				margin-bottom: 0.75em;
+			}
+			ul.results li::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0.5em;
+				width: 8px;
+				height: 8px;
+				border-radius: 999px;
+				background: linear-gradient(135deg, var(--accent), var(--accent-2));
 			}
 			.back {
 				display: inline-block;
-				margin-top: 2em;
+				margin-top: 2.5em;
+				font-weight: 700;
 			}
 		</style>
 	</head>
@@ -63,7 +74,7 @@ const { title, client, summary, challenge, solution, results } = data;
 		<Header />
 		<main>
 			<article>
-				<p class="client">{client}</p>
+				<span class="badge client">{client}</span>
 				<h1>{title}</h1>
 				<p class="summary">{summary}</p>
 
