@@ -1,0 +1,86 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+
+export async function getStaticPaths() {
+	const items = await getCollection('work');
+	return items.map((item) => ({
+		params: { slug: item.id },
+		props: item,
+	}));
+}
+type Props = CollectionEntry<'work'>;
+
+const { data } = Astro.props;
+const { title, client, summary, challenge, solution, results } = data;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`${title} — Aaron Amerling`} description={summary} />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			.client {
+				margin: 0 0 0.5em 0;
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+			}
+			h1 {
+				margin: 0 0 0.5em 0;
+				color: rgb(var(--black));
+			}
+			.summary {
+				font-size: 1.2rem;
+			}
+			h2 {
+				color: rgb(var(--black));
+				margin-top: 2em;
+			}
+			ul.results {
+				padding-left: 1.2em;
+			}
+			ul.results li {
+				margin-bottom: 0.5em;
+			}
+			.back {
+				display: inline-block;
+				margin-top: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<p class="client">{client}</p>
+				<h1>{title}</h1>
+				<p class="summary">{summary}</p>
+
+				<h2>Challenge</h2>
+				<p>{challenge}</p>
+
+				<h2>Solution</h2>
+				<p>{solution}</p>
+
+				<h2>Results</h2>
+				<ul class="results">
+					{results.map((result) => <li>{result}</li>)}
+				</ul>
+
+				<a class="back" href={`${import.meta.env.BASE_URL}work/`}>&larr; Back to Work</a>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

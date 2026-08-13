@@ -9,40 +9,100 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+			}
+			.eyebrow {
+				margin: 0;
+				color: rgb(var(--gray));
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+				font-size: 0.9rem;
+			}
+			.lede {
+				font-size: 1.25rem;
+				color: rgb(var(--gray-dark));
+			}
+			.stats {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2em;
+				margin: 2em 0;
+				padding: 1.5em 0;
+				border-top: 1px solid rgb(var(--gray-light));
+				border-bottom: 1px solid rgb(var(--gray-light));
+			}
+			.stats div {
+				min-width: 140px;
+			}
+			.stats strong {
+				display: block;
+				font-size: 1.8rem;
+				color: rgb(var(--black));
+			}
+			.stats span {
+				color: rgb(var(--gray));
+				font-size: 0.9rem;
+			}
+			.cta {
+				display: flex;
+				gap: 1em;
+				flex-wrap: wrap;
+			}
+			.cta a {
+				display: inline-block;
+				padding: 0.6em 1.2em;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			.cta a.primary {
+				background: rgb(var(--accent));
+				color: white;
+			}
+			.cta a.secondary {
+				border: 1px solid rgb(var(--gray-light));
+				color: rgb(var(--black));
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
+			<p class="eyebrow">Aaron Amerling</p>
+			<h1>Growth & Demand Generation Leader</h1>
+			<p class="lede">
+				Growth marketing leader who owns the number, not just the channel. I build measurable,
+				trackable pipeline across B2B and B2B2C audiences, run the full digital and
+				revenue-operations stack, and do it AI-natively — deploying Generative Engine Optimization
+				and Answer Engine Optimization as live growth channels ahead of the category.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<div class="stats">
+				<div>
+					<strong>$40M+</strong>
+					<span>Annual paid media budget managed</span>
+				</div>
+				<div>
+					<strong>400%</strong>
+					<span>Sales increase, CPA cut ~2/3 in one year</span>
+				</div>
+				<div>
+					<strong>60</strong>
+					<span>-person marketing org led</span>
+				</div>
+				<div>
+					<strong>5</strong>
+					<span>U.S. patents, co-inventor</span>
+				</div>
+			</div>
+			<div class="cta">
+				<a class="primary" href={`${import.meta.env.BASE_URL}work/`}>See the work</a>
+				<a class="secondary" href={`${import.meta.env.BASE_URL}about/`}>About me</a>
+				<a class="secondary" href="mailto:aaronamerling@gmail.com">Get in touch</a>
+			</div>
 		</main>
 		<Footer />
 	</body>

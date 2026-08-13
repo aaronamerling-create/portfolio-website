@@ -1,63 +1,106 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="About — Aaron Amerling"
+			description="Growth marketing leader with a background in storytelling, product, and applied AI."
+		/>
+		<style>
+			main {
+				width: 720px;
+				max-width: calc(100% - 2em);
+				margin: auto;
+				padding: 1em;
+				color: rgb(var(--gray-dark));
+			}
+			h1 {
+				color: rgb(var(--black));
+			}
+			h2 {
+				color: rgb(var(--black));
+				margin-top: 1.75em;
+			}
+			ul {
+				padding-left: 1.2em;
+			}
+			li {
+				margin-bottom: 0.4em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About</h1>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<p>
+				I'm a growth marketing leader who owns the number, not just the channel. I build
+				measurable, trackable pipeline across B2B and B2B2C audiences, run the full digital and
+				revenue-operations stack, and do it AI-natively — deploying Generative Engine Optimization
+				(GEO) and Answer Engine Optimization (AEO) as live growth channels ahead of the category,
+				and rolling generative AI workflows across marketing organizations. My background spans
+				regulated financial services marketing, lean high-output teams, and hands-on execution
+				alongside team leadership.
+			</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<p>
+				Most recently I was Head of Marketing / CMO at Etna Interactive, where I led a
+				60-person organization spanning paid, owned, earned, strategy and client services. Before
+				that, as VP of Strategy at The Lemonade Agency, I oversaw marketing for clients including
+				Disney, Meta, Square Enix, Ubisoft, Dior and DirecTV. Earlier in my career I managed a
+				$40M+ digital marketing budget at GAIN Credit and built GreatCall's (now Best Buy Health)
+				first direct-to-consumer digital strategy — helping grow mobile users from 25,000 to over
+				1.5 million.
+			</p>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+			<p>
+				I started as a writer — credits include Nickelodeon's <em>Avatar: The Last Airbender</em>,
+				a 20th Century Fox New Writers Award, and a Nickelodeon Fellowship. That instinct for
+				narrative is still where I start: it's why I was able to reverse years of decline for the
+				San Francisco Marathon through repositioning, and why I care as much about the story a
+				brand tells as the channel mechanics underneath it.
+			</p>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+			<h2>Applied AI</h2>
+			<p>
+				I stood up Answer Engine Optimization as a growth channel before most agencies had a name
+				for it, and I design, prototype and ship with AI tooling myself rather than just briefing
+				it out. I mentor early-stage AI founders through Techstars, and as a strategic advisor to
+				Steno.ai I identified the digital-cloning use case that landed Tony Robbins as the
+				company's flagship customer. I was also an early marketing advisor to GoFundMe, back when
+				it was three people around a table and still called "Create-A-Fund."
+			</p>
+
+			<h2>Patents & recognition</h2>
+			<ul>
+				<li>
+					Co-inventor, five U.S. patents for a trust-network architecture — originally built for
+					emergency response call centers and written broadly enough to cover authentication,
+					identity verification, and influence targeting; assigned to GreatCall / Best Buy Health.
+				</li>
+				<li>Runner-up, CONNECT Most Innovative Product of the Year (Mobile Apps)</li>
+				<li>International Communicator Award; three International Telly Awards, Digital Advertising</li>
+				<li>Nickelodeon Fellowship Recipient; 20th Century Fox New Writers Award</li>
+			</ul>
+
+			<h2>Education</h2>
+			<ul>
+				<li>M.A. in Digital Media, TV and Film — San Diego State University</li>
+				<li>B.A. in History — University of California, Santa Cruz</li>
+			</ul>
+
+			<h2>Elsewhere</h2>
+			<ul>
+				<li><a href="https://www.linkedin.com/in/aaronamerling/">LinkedIn</a></li>
+				<li><a href="mailto:aaronamerling@gmail.com">aaronamerling@gmail.com</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
