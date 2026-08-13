@@ -1,12 +1,17 @@
 ---
-title: "AI Digital Twin Go-to-Market"
+title: "Finding the Digital Twin Use Case, Then Landing Tony Robbins"
 client: "Steno.ai — Techstars '23"
 order: 4
-summary: "Advised an AI 'digital twin' startup on brand strategy and product-market fit, and led the engagement that landed its flagship customer."
-challenge: "Steno.ai had built AI digital-cloning technology as part of the Techstars '23 cohort but hadn't yet locked in the commercial use case or a flagship customer to prove the model."
-solution: "As strategic advisor, identified digital cloning as a fit for the influencer and expert markets, shaped brand and product-market-fit strategy, and led the engagement that secured Tony Robbins as the company's flagship customer."
+summary: "Identified the use case for AI-based digital cloning in the influencer and expert markets, and led the engagement that secured Tony Robbins as the company's flagship customer."
+challenge: "Steno.ai had working AI digital-twin technology as part of the Techstars '23 cohort, but no settled answer for which people were worth cloning, or who would pay for it. It's a young enough category that there was no comparable company to point to and no buyer already shopping for the thing."
+solution: "As strategic advisor, identified digital cloning as a fit for the influencer and expert markets — people with existing audiences, a body of recorded thinking, and enough trust for a synthetic version to read as generous rather than as a shortcut — and led the engagement that secured Tony Robbins as the company's flagship customer."
 results:
-  - "Landed Tony Robbins as Steno.ai's flagship customer, validating the digital-cloning use case in the expert and influencer market"
+  - "Landed Tony Robbins as Steno.ai's flagship customer, giving the company a reference case in a category with no comparables"
   - "Shaped go-to-market and brand strategy for an AI venture inside the Techstars '23 cohort"
   - "Continue to mentor early-stage AI founders through the Techstars network"
+scope: "Strategic advisor and Techstars mentor, not an operating role. I identified the use case and target market and led the engagement that closed the flagship customer; the product, the technology, and day-to-day execution were the founding team's."
+quote:
+  text: "Aaron is the strategist you want to have in the room. Over the years we've worked together on campaigns for clients from indie game devs to Fortune 100 companies to provide high impact growth strategies that are custom fit for each business challenge. Aaron strikes the right balance between proven methodologies and disruptive tactics that leverage current trends and emerging technologies. Aaron brings blue flame thinking and passion to every project."
+  name: "Rowan Brooks"
+  title: "Agency collaborator"
 ---

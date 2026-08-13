@@ -9,7 +9,7 @@ import { BRANDS, SITE_DESCRIPTION, SITE_TITLE, TESTIMONIALS } from '../consts';
 
 const featuredWork = (await getCollection('work'))
 	.sort((a, b) => a.data.order - b.data.order)
-	.slice(0, 3);
+	.slice(0, 4);
 ---
 
 <!doctype html>
@@ -98,7 +98,7 @@ const featuredWork = (await getCollection('work'))
 
 			.work-grid {
 				display: grid;
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(2, 1fr);
 				gap: 1.5em;
 			}
 			.work-grid .client {

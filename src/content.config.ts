@@ -28,6 +28,14 @@ const work = defineCollection({
 		solution: z.string(),
 		results: z.array(z.string()),
 		order: z.number(),
+		scope: z.string().optional(),
+		quote: z
+			.object({
+				text: z.string(),
+				name: z.string(),
+				title: z.string(),
+			})
+			.optional(),
 	}),
 });
 

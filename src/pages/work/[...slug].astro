@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'work'>;
 
 const { data } = Astro.props;
-const { title, client, summary, challenge, solution, results } = data;
+const { title, client, summary, challenge, solution, results, scope, quote } = data;
 ---
 
 <!doctype html>
@@ -63,6 +63,17 @@ const { title, client, summary, challenge, solution, results } = data;
 				border-radius: 999px;
 				background: linear-gradient(135deg, var(--accent), var(--accent-2));
 			}
+			.scope {
+				font-size: 0.95rem;
+				font-style: italic;
+				color: rgb(var(--gray));
+				border-left: 3px solid rgb(var(--gray-light));
+				padding-left: 1em;
+				margin: 1.5em 0;
+			}
+			.quote-card {
+				margin-top: 2.5em;
+			}
 			.back {
 				display: inline-block;
 				margin-top: 2.5em;
@@ -77,6 +88,7 @@ const { title, client, summary, challenge, solution, results } = data;
 				<span class="badge client">{client}</span>
 				<h1>{title}</h1>
 				<p class="summary">{summary}</p>
+				{scope && <p class="scope">{scope}</p>}
 
 				<h2>Challenge</h2>
 				<p>{challenge}</p>
@@ -88,6 +100,18 @@ const { title, client, summary, challenge, solution, results } = data;
 				<ul class="results">
 					{results.map((result) => <li>{result}</li>)}
 				</ul>
+
+				{
+					quote && (
+						<div class="quote-card">
+							<p class="quote">{quote.text}</p>
+							<p class="attribution">
+								{quote.name}
+								<span>{quote.title}</span>
+							</p>
+						</div>
+					)
+				}
 
 				<a class="back" href={`${import.meta.env.BASE_URL}work/`}>&larr; Back to Work</a>
 			</article>
