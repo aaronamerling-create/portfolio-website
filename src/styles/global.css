@@ -3,7 +3,9 @@
 	--ink: #16191c;
 	--muted: #5f6770;
 	--rule: #dee1dd;
-	--accent: #1d4e89;
+	--accent: #4f46e5;
+	--accent-2: #7c3aed;
+	--accent-soft: 79, 70, 229;
 	--radius: 0px;
 }
 
@@ -153,13 +155,21 @@ section {
 }
 .btn-accent {
 	border-color: var(--accent);
-	color: var(--paper);
-	background: var(--accent);
+	color: #fff;
+	background: linear-gradient(100deg, var(--accent), var(--accent-2));
+	box-shadow: 0 8px 20px rgba(var(--accent-soft), 30%);
 }
 .btn-accent:hover {
 	background: var(--ink);
 	border-color: var(--ink);
 	color: var(--paper);
+	box-shadow: none;
+}
+.gradient-text {
+	background: linear-gradient(100deg, var(--accent), var(--accent-2));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 .link-row {
 	display: flex;
@@ -185,7 +195,10 @@ section {
 	font-size: clamp(32px, 5vw, 56px);
 	font-weight: 700;
 	line-height: 1;
-	color: var(--accent);
+	background: linear-gradient(100deg, var(--accent), var(--accent-2));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 	font-variant-numeric: tabular-nums;
 	margin: 0 0 0.2em 0;
 }

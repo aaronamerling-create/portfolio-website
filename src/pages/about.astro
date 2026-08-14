@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/photos/aaron-amerling.jpg';
 import PageLayout from '../layouts/PageLayout.astro';
 
 const faqs = [
@@ -61,8 +63,13 @@ const faqSchema = {
 	schema={faqSchema}
 >
 	<div class="wrap section-lg prose">
-		<p class="eyebrow reveal">About</p>
-		<h1 class="reveal">Aaron Amerling</h1>
+		<div class="about-head">
+			<div class="reveal">
+				<p class="eyebrow">About</p>
+				<h1>Aaron Amerling</h1>
+			</div>
+			<Image class="about-photo reveal" src={headshot} alt="Aaron Amerling" width={160} height={160} />
+		</div>
 
 		<p class="reveal">
 			I find the shift before it's obvious, then build the brand, product or team that meets it. At
@@ -136,3 +143,25 @@ const faqSchema = {
 		))}
 	</div>
 </PageLayout>
+
+<style>
+	.about-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2em;
+	}
+	.about-head :global(.about-photo) {
+		width: 120px;
+		height: 120px;
+		object-fit: cover;
+		border: 1px solid var(--rule);
+		flex-shrink: 0;
+	}
+	@media (max-width: 560px) {
+		.about-head {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+	}
+</style>
