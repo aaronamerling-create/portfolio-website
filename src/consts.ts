@@ -70,7 +70,7 @@ export const LOGO_ROWS: LogoRow[] = [
 	{
 		label: 'In house',
 		items: [
-			{ name: 'Etna Interactive', caption: 'Chief Marketing Officer' },
+			{ name: 'Etna Interactive', caption: 'Chief Marketing Officer', logo: 'etna-interactive.png' },
 			{
 				name: 'Best Buy Health (GreatCall)',
 				caption: 'Sr. Manager, Digital and Mobile Product and Marketing',
@@ -84,6 +84,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'Voxox / Telcentris',
 				caption: 'Director of Marketing and Product Innovation',
+				logo: 'voxox.png',
 			},
 			{
 				name: 'Robbins Research International (Tony Robbins)',
@@ -135,8 +136,8 @@ export const LOGO_ROWS: LogoRow[] = [
 		label: 'Advisory',
 		items: [
 			{ name: 'GoFundMe', caption: 'Early marketing advisor', logo: 'gofundme.svg' },
-			{ name: 'Steno.ai', caption: "Strategic advisor, Techstars '23" },
-			{ name: 'TrendSource', caption: 'Strategic marketing advisor' },
+			{ name: 'Steno.ai', caption: "Strategic advisor, Techstars '23", logo: 'steno-ai.jpeg' },
+			{ name: 'TrendSource', caption: 'Strategic marketing advisor', logo: 'trendsource.png' },
 			{
 				name: 'American Medical Response (AMR)',
 				caption: 'Crisis and search strategy advisor',
