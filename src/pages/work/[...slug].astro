@@ -1,8 +1,8 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
+import CitationMetric from '../../components/CitationMetric.astro';
+import PullQuote from '../../components/PullQuote.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
 export async function getStaticPaths() {
 	const items = await getCollection('work');
@@ -14,121 +14,97 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'work'>;
 
 const { data } = Astro.props;
-const { title, client, summary, challenge, solution, results, scope, quotes } = data;
+const {
+	headline,
+	dek,
+	client,
+	whereThingsStood,
+	theCall,
+	whatGotBuilt,
+	metrics,
+	whatIdDoDifferently,
+	scope,
+	quotes,
+} = data;
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'CreativeWork',
+	name: headline,
+	about: dek,
+	creator: { '@type': 'Person', name: 'Aaron Amerling' },
+};
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={`${title} — Aaron Amerling`} description={summary} />
-		<style>
-			main {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.client {
-				margin: 0 0 0.5em 0;
-			}
-			h1 {
-				margin: 0 0 0.5em 0;
-				color: rgb(var(--black));
-			}
-			.summary {
-				font-size: 1.2rem;
-				color: rgb(var(--gray-dark));
-			}
-			h2 {
-				color: rgb(var(--black));
-				margin-top: 2em;
-			}
-			ul.results {
-				padding-left: 0;
-				list-style: none;
-			}
-			ul.results li {
-				position: relative;
-				padding-left: 1.6em;
-				margin-bottom: 0.75em;
-			}
-			ul.results li::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0.5em;
-				width: 8px;
-				height: 8px;
-				border-radius: 999px;
-				background: linear-gradient(135deg, var(--accent), var(--accent-2));
-			}
-			.scope {
-				font-size: 0.95rem;
-				font-style: italic;
-				color: rgb(var(--gray));
-				border-left: 3px solid rgb(var(--gray-light));
-				padding-left: 1em;
-				margin: 1.5em 0;
-			}
-			.quotes {
-				display: flex;
-				flex-direction: column;
-				gap: 1.25em;
-				margin-top: 2.5em;
-			}
-			.quote-card .current {
-				display: block;
-				font-family: monospace;
-				font-weight: 400;
-				color: rgb(var(--gray));
-				font-size: 0.85rem;
-			}
-			.back {
-				display: inline-block;
-				margin-top: 2.5em;
-				font-weight: 700;
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<article>
-				<span class="badge client">{client}</span>
-				<h1>{title}</h1>
-				<p class="summary">{summary}</p>
-				{scope && <p class="scope">{scope}</p>}
+<PageLayout title={`${headline} · Aaron Amerling`} description={dek} schema={schema}>
+	<div class="wrap section-lg prose">
+		<p class="eyebrow client reveal">{client}</p>
+		<h1 class="reveal">{headline}</h1>
+		<p class="dek reveal">{dek}</p>
 
-				<h2>Challenge</h2>
-				<p>{challenge}</p>
+		<h2 class="reveal">Where things stood</h2>
+		<p class="reveal">{whereThingsStood}</p>
 
-				<h2>Solution</h2>
-				<p>{solution}</p>
+		<h2 class="reveal">The call</h2>
+		<p class="reveal" set:html={theCall} />
 
-				<h2>Results</h2>
-				<ul class="results">
-					{results.map((result) => <li>{result}</li>)}
-				</ul>
+		<h2 class="reveal">What got built</h2>
+		<ol class="built reveal">
+			{whatGotBuilt.map((step) => <li>{step}</li>)}
+		</ol>
 
-				{quotes && quotes.length > 0 && (
-					<div class="quotes">
-						{quotes.map((q) => (
-							<div class="quote-card">
-								<p class="quote">{q.text}</p>
-								<p class="attribution">
-									{q.name}
-									<span>{q.roleAtTime}</span>
-									{q.current && <span class="current">now: {q.current}</span>}
-								</p>
-							</div>
-						))}
-					</div>
-				)}
+		{metrics.length > 0 && (
+			<>
+				<h2 class="reveal">Results</h2>
+				<div class="metrics">
+					{metrics.map((m) => <CitationMetric value={m.value} label={m.label} citation={m.citation} />)}
+				</div>
+			</>
+		)}
 
-				<a class="back" href={`${import.meta.env.BASE_URL}work/`}>&larr; Back to Work</a>
-			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+		{whatIdDoDifferently && <h2 class="reveal">What I would do differently</h2>}
+		{whatIdDoDifferently && <p class="reveal">{whatIdDoDifferently}</p>}
+		{!whatIdDoDifferently && (
+			<Fragment set:html={'<!-- NEEDS: one honest line on what I would do differently -->'} />
+		)}
+
+		<h2 class="reveal">Scope</h2>
+		<p class="reveal">{scope}</p>
+
+		{quotes && quotes.map((q) => (
+			<PullQuote
+				quote={q.text}
+				name={q.name}
+				roleAtTime={q.roleAtTime}
+				current={q.current}
+				full={q.full}
+				linkedin={q.linkedin}
+			/>
+		))}
+
+		<p class="reveal"><a href={`${import.meta.env.BASE_URL}work/`}>&larr; Back to work</a></p>
+	</div>
+</PageLayout>
+
+<style>
+	.dek {
+		font-size: 1.15rem;
+		color: var(--muted);
+	}
+	.built {
+		padding-left: 1.3em;
+	}
+	.built li {
+		margin-bottom: 0.6em;
+	}
+	.metrics {
+		margin-bottom: 1em;
+	}
+	p.needs {
+		font-family: var(--font-mono), monospace;
+		font-size: 13px;
+		color: var(--muted);
+		border: 1px dashed var(--rule);
+		padding: 0.75em 1em;
+	}
+</style>

@@ -1,0 +1,33 @@
+---
+headline: "25,000 mobile users to 1.5 million, with CPA cut by two thirds."
+dek: "A print-and-broadcast brand selling to seniors, repositioned around the adult children making the purchase decision. Two #1 Medical-category apps came down to decisions made before either launched."
+client: "GreatCall (now Best Buy Health)"
+order: 6
+whereThingsStood: "GreatCall relied almost entirely on print and broadcast for awareness, with no proven way to reach its target demographic, older adults, through digital channels, and no non-brand PPC or social content strategy."
+theCall: "The obvious audience to target with digital was the end user: seniors themselves. I rejected that. The people researching and purchasing the product were overwhelmingly the adult children and caregivers of the core demographic, so the digital strategy targeted them directly, with messaging built around health and safety rather than the product spec sheet."
+whatGotBuilt:
+  - "Built the company's first direct-to-consumer digital strategy across PPC, social, content and display"
+  - "Targeted the adult children and caregivers of the core demographic instead of the end user"
+  - "Launched the company's first SEO and affiliate program"
+  - "Built and ran the company's first agile mobile apps product team"
+  - "Built and ran the largest caregiver-focused Facebook group in the category"
+metrics:
+  - value: "400%"
+    label: "sales increase, CPA cut by roughly two thirds in one year"
+    citation: "GreatCall (now Best Buy Health), 2013 to 2014."
+  - value: "25,000 to 1.5M"
+    label: "mobile users, with two #1 Medical-category apps launched"
+    citation: "GreatCall, 2012 to 2016. App Store and Google Play."
+  - value: "500%"
+    label: "lift in affiliate sales, with organic traffic doubled through the company's first SEO and affiliate program"
+    citation: "GreatCall, Sr. Manager, Digital and Mobile Product and Marketing."
+scope: "Sr. Manager, Digital and Mobile Product and Marketing. Built the D2C digital function from scratch, ran the first agile mobile product team, managed direct reports plus fourteen agencies and vendors."
+quotes:
+  - text: "Transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency."
+    name: "Richie Hannah"
+    roleAtTime: "Managed Aaron at GreatCall"
+    current: "Founder and CEO, Yellow Cap Media"
+  - text: "Forward-thinking digital marketer."
+    name: "Jessica DeFilippo Nenadal"
+    roleAtTime: "Direct report at GreatCall"
+---

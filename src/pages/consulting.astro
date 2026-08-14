@@ -1,0 +1,59 @@
+---
+import PullQuote from '../components/PullQuote.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+	title="Consulting and advisory · Aaron Amerling"
+	description="Fractional and advisory work for founders and growth-stage teams. Marketing strategy and systems first, then AI and automation layered on top."
+>
+	<div class="wrap section-lg prose">
+		<p class="eyebrow reveal">Advisory and fractional</p>
+		<h1 class="reveal">Build the marketing before you automate it.</h1>
+		<p class="reveal">
+			Most AI marketing programs fail for a boring reason. They automate a funnel that was already
+			broken, and now it is broken faster and at greater volume. The strategy and the system have to
+			be right first. Then the automation is worth wiring together.
+		</p>
+
+		<h2 class="reveal">What I work on</h2>
+		<ul class="reveal">
+			<li>Performance marketing and demand generation</li>
+			<li>Go-to-market and positioning</li>
+			<li>
+				Answer engine and generative engine optimization, getting cited inside AI answers, not just
+				ranked in a list. I built this as a working channel before the category had a name.
+			</li>
+			<li>Marketing systems and automation architecture, full-funnel pipelines built hands-on, not briefed out.</li>
+			<li>Marketing organization design, structure, specialist career paths, insource vs. outsource decisions.</li>
+		</ul>
+
+		<h2 class="reveal">How it works</h2>
+		<p class="reveal">
+			A conversation first, free. Forty-five minutes. If AI or automation is not the thing that will
+			move your numbers, I will say so.
+		</p>
+		<p class="reveal">
+			A short diagnostic. Two to three weeks. What is happening in the funnel, where the leverage is,
+			and what the sequence should be. You keep the document whether or not we continue.
+		</p>
+		<p class="reveal">
+			Ongoing fractional work. A set number of days a month, running the strategy layer alongside
+			your team.
+		</p>
+		<p class="reveal">I take a small number of engagements at a time.</p>
+
+		<PullQuote quote="My go-to innovator of marketing strategy." name="Sarah Rowlett" roleAtTime="Senior Account Director, TrendSource" current="Account Manager (ex-Google)" />
+		<PullQuote quote="An incredibly strategic thinker." name="Jeffrey Tompkins" roleAtTime="Aaron was his client" />
+
+		<h2 class="reveal">Who this is for</h2>
+		<p class="reveal">
+			Founders and growth-stage teams who have a product that works and a marketing function that
+			does not yet match it.
+		</p>
+
+		<a class="btn btn-accent reveal" href={`${import.meta.env.BASE_URL}contact/?reason=consulting`}>
+			Start with a conversation
+		</a>
+	</div>
+</PageLayout>

@@ -1,142 +1,138 @@
 ---
-import { Image } from 'astro:assets';
-import headshot from '../assets/photos/aaron-amerling.jpg';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+
+const faqs = [
+	{
+		q: 'What does Aaron Amerling do?',
+		a: 'Aaron Amerling is a marketing and product leader based in San Diego, California. He most recently served as Chief Marketing Officer at Etna Interactive, where he led a 60-person marketing organization. His work spans growth marketing, product marketing, organization design and applied AI, including answer engine optimization and generative engine optimization as live growth channels.',
+	},
+	{
+		q: 'What kind of roles is he looking for?',
+		a: 'Chief Marketing Officer at an early-stage company, VP of Marketing at a mid-market company, or Director-level leadership inside an enterprise. He is based in San Diego and works remotely or hybrid. Consumer, health, fintech, telecom, gaming and AI are all in scope.',
+	},
+	{
+		q: 'Does he take consulting or advisory work?',
+		a: 'Yes. He takes a small number of fractional and advisory engagements at a time, covering brand strategy, go-to-market, demand generation and applied AI. Past advisory clients include GoFundMe, Steno.ai, TrendSource and American Medical Response.',
+	},
+	{
+		q: 'What is answer engine optimization, and what has he actually done with it?',
+		a: "Answer engine optimization is the practice of getting a brand cited inside the synthesized answers that AI assistants return, rather than ranking in a list of links. The unit of competition, the content shape and the measurement model are all different from traditional search. Aaron built AEO and generative engine optimization into working growth channels at Etna Interactive ahead of the category, and rolled generative AI workflows across a marketing organization of sixty people.",
+	},
+	{
+		q: 'What are the patents?',
+		a: 'He is co-inventor on five U.S. patents covering a trust-network architecture. The work originated in emergency response call centers and was written broadly enough to cover authentication, identity verification and influence targeting. The patents were filed in 2016 and 2017 and are assigned to GreatCall, now Best Buy Health. They are not AI patents.',
+	},
+	{
+		q: 'Has he managed large teams?',
+		a: "Yes. He led a 60-person marketing organization at Etna Interactive across paid, owned, earned, strategy and client services. At GAIN Credit he ran a team split across San Diego, London and Chennai that became the company's top-performing sales channel within six months. At GreatCall he managed direct reports plus fourteen agencies and vendors.",
+	},
+	{
+		q: 'Has he worked on AI products, or only AI in marketing?',
+		a: "Both. As a strategic advisor to Steno.ai, a Techstars '23 AI digital twin company, he identified the use case for digital cloning in the expert and influencer markets and led the engagement that secured Tony Robbins as the flagship customer. He also mentors early-stage AI founders through the Techstars network, and launched AI consumer-facing products while Chief Marketing Officer at Etna Interactive.",
+	},
+	{
+		q: 'What industries has he worked in?',
+		a: 'Consumer electronics and health at Best Buy Health, fintech and lending at GAIN Credit, telecom and SaaS at Voxox, healthcare marketing at Etna Interactive, and gaming, entertainment and Web3 through agency work for Disney, Meta, Ubisoft, Square Enix and Dior.',
+	},
+	{
+		q: 'Where is he based and does he work remotely?',
+		a: 'San Diego, California. He works remotely and hybrid, and has run distributed teams across three continents.',
+	},
+	{
+		q: 'How do you get in touch?',
+		a: 'Email aaronamerling@gmail.com or connect on LinkedIn at linkedin.com/in/aaronamerling.',
+	},
+];
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((f) => ({
+		'@type': 'Question',
+		name: f.q,
+		acceptedAnswer: { '@type': 'Answer', text: f.a },
+	})),
+};
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title="About — Aaron Amerling"
-			description="Growth marketing leader with a background in storytelling, product, and applied AI."
-		/>
-		<style>
-			.about-hero {
-				display: flex;
-				align-items: center;
-				gap: 2em;
-				margin-bottom: 1em;
-			}
-			.about-hero :global(img) {
-				width: 120px;
-				height: 120px;
-				object-fit: cover;
-				border-radius: 999px;
-				flex-shrink: 0;
-			}
-			main {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 3em 1em;
-				color: rgb(var(--gray-dark));
-			}
-			h2 {
-				color: rgb(var(--black));
-				margin-top: 1.75em;
-			}
-			ul {
-				padding-left: 1.2em;
-			}
-			li {
-				margin-bottom: 0.4em;
-			}
-			@media (max-width: 560px) {
-				.about-hero {
-					flex-direction: column;
-					text-align: center;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="about-hero">
-				<div class="avatar-ring">
-					<Image src={headshot} alt="Aaron Amerling" width={120} height={120} />
-				</div>
-				<div>
-					<p class="eyebrow">About</p>
-					<h1>Aaron Amerling</h1>
-				</div>
-			</div>
+<PageLayout
+	title="About Aaron Amerling · Marketing, product and applied AI"
+	description="Chief Marketing Officer, product leader, co-inventor on five U.S. patents, early advisor to GoFundMe."
+	schema={faqSchema}
+>
+	<div class="wrap section-lg prose">
+		<p class="eyebrow reveal">About</p>
+		<h1 class="reveal">Aaron Amerling</h1>
 
-			<p>
-				I'm a growth marketing leader who owns the number, not just the channel. I build
-				measurable, trackable pipeline across B2B and B2B2C audiences, run the full digital and
-				revenue-operations stack, and do it AI-natively — deploying Generative Engine Optimization
-				(GEO) and Answer Engine Optimization (AEO) as live growth channels ahead of the category,
-				and rolling generative AI workflows across marketing organizations. My background spans
-				regulated financial services marketing, lean high-output teams, and hands-on execution
-				alongside team leadership.
-			</p>
+		<p class="reveal">
+			I find the shift before it's obvious, then build the brand, product or team that meets it. At
+			GoFundMe that meant advising the founders when the company was three people around a table
+			and still called Create-A-Fund. At GreatCall it meant helping push a telecom company into
+			mobile health. At Etna it meant standing up answer engine optimization before most agencies
+			had a name for it.
+		</p>
 
-			<p>
-				Most recently I was Head of Marketing / CMO at Etna Interactive, where I led a
-				60-person organization spanning paid, owned, earned, strategy and client services. Before
-				that, as VP of Strategy at The Lemonade Agency, I oversaw marketing for clients including
-				Disney, Meta, Square Enix, Ubisoft, Dior and DirecTV. Earlier in my career I managed a
-				$40M+ digital marketing budget at GAIN Credit and built GreatCall's (now Best Buy Health)
-				first direct-to-consumer digital strategy — helping grow mobile users from 25,000 to over
-				1.5 million.
-			</p>
+		<p class="reveal">
+			Most recently I was Chief Marketing Officer at Etna Interactive, where I led a 60-person
+			organization spanning paid, owned, earned, strategy and client services. Before that, as VP of
+			Strategy at The Lemonade Agency, I built marketing strategy for clients including Disney,
+			Meta, Square Enix, Ubisoft, Dior and DirecTV. Earlier I managed a $40M+ digital marketing
+			budget at GAIN Credit and built GreatCall's first direct-to-consumer digital strategy, growing
+			mobile users from 25,000 to over 1.5 million.
+		</p>
 
-			<p>
-				I started as a writer — credits include Nickelodeon's <em>Avatar: The Last Airbender</em>,
-				a 20th Century Fox New Writers Award, and a Nickelodeon Fellowship. That instinct for
-				narrative is still where I start: it's why I was able to reverse years of decline for the
-				San Francisco Marathon through repositioning, and why I care as much about the story a
-				brand tells as the channel mechanics underneath it.
-			</p>
+		<p class="reveal">
+			I started as a writer. Credits include Nickelodeon's <em>Avatar: The Last Airbender</em>, a
+			20th Century Fox New Writers Award, and a Nickelodeon Fellowship. That instinct for narrative
+			is still where I start.
+		</p>
 
-			<h2>Applied AI</h2>
-			<p>
-				I stood up Answer Engine Optimization as a growth channel before most agencies had a name
-				for it, and I design, prototype and ship with AI tooling myself rather than just briefing
-				it out. I mentor early-stage AI founders through Techstars, and as a strategic advisor to
-				Steno.ai I identified the digital-cloning use case that landed Tony Robbins as the
-				company's flagship customer. I was also an early marketing advisor to GoFundMe, back when
-				it was three people around a table and still called "Create-A-Fund."
-			</p>
+		<h2 class="reveal">Applied AI</h2>
+		<p class="reveal">
+			I stood up Answer Engine Optimization as a growth channel before most agencies had a name for
+			it, and I design, prototype and ship with AI tooling myself rather than just briefing it out.
+			I mentor early-stage AI founders through Techstars, and as a strategic advisor to Steno.ai I
+			identified the digital-cloning use case that landed Tony Robbins as the company's flagship
+			customer.
+		</p>
 
-			<h2>Patents & recognition</h2>
-			<ul>
-				<li>
-					Co-inventor, five U.S. patents for a trust-network architecture — originally built for
-					emergency response call centers and written broadly enough to cover authentication,
-					identity verification, and influence targeting; assigned to GreatCall / Best Buy Health.
-				</li>
-				<li>Runner-up, CONNECT Most Innovative Product of the Year (Mobile Apps)</li>
-				<li>International Communicator Award; three International Telly Awards, Digital Advertising</li>
-				<li>Nickelodeon Fellowship Recipient; 20th Century Fox New Writers Award</li>
-			</ul>
+		<h2 class="reveal">Patents and recognition</h2>
+		<ul class="reveal">
+			<li>
+				Co-inventor, five U.S. patents for a trust-network architecture, originally built for
+				emergency response call centers and written broadly enough to cover authentication,
+				identity verification, and influence targeting. Assigned to GreatCall / Best Buy Health.
+			</li>
+			<li>Runner-up, CONNECT Most Innovative Product of the Year (Mobile Apps)</li>
+			<li>International Communicator Award. Three International Telly Awards, Digital Advertising</li>
+			<li>Nickelodeon Fellowship Recipient. 20th Century Fox New Writers Award</li>
+		</ul>
 
-			<h2>Education</h2>
-			<ul>
-				<li>M.A. in Digital Media, TV and Film — San Diego State University</li>
-				<li>B.A. in History — University of California, Santa Cruz</li>
-			</ul>
+		<h2 class="reveal">Education</h2>
+		<ul class="reveal">
+			<li>M.A. in Digital Media, TV and Film, San Diego State University</li>
+			<li>B.A. in History, University of California, Santa Cruz</li>
+		</ul>
 
-			<h2>FAQ</h2>
-			<p>
-				<strong>Has he worked on AI products, or only AI in marketing?</strong><br />
-				Both. As a strategic advisor to Steno.ai, a Techstars '23 AI digital-twin company, he
-				identified the use case for digital cloning in the expert and influencer markets and led
-				the engagement that secured Tony Robbins as the flagship customer. He also mentors
-				early-stage AI founders through the Techstars network, and launched AI consumer-facing
-				products while Chief Marketing Officer at Etna Interactive.
-			</p>
+		<h2 class="reveal">What I'm looking for</h2>
+		<p class="reveal">
+			Full-time. CMO at an early-stage company, VP at mid-market, Director inside an enterprise. San
+			Diego or remote. Consumer, health, fintech, telecom, gaming and AI are all live for me.
+		</p>
+		<p class="reveal">
+			Advisory and fractional. Brand, go-to-market and applied AI for founders and growth-stage
+			teams. A small number of engagements at a time.
+		</p>
+		<p class="reveal">Email: <a href="mailto:aaronamerling@gmail.com">aaronamerling@gmail.com</a></p>
+	</div>
 
-			<h2>Elsewhere</h2>
-			<ul>
-				<li><a href="https://www.linkedin.com/in/aaronamerling/">LinkedIn</a></li>
-				<li><a href="mailto:aaronamerling@gmail.com">aaronamerling@gmail.com</a></li>
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
+	<div class="wrap section-lg faq">
+		<h2 class="reveal">FAQ</h2>
+		{faqs.map((f) => (
+			<details class="reveal">
+				<summary>{f.q}</summary>
+				<p>{f.a}</p>
+			</details>
+		))}
+	</div>
+</PageLayout>

@@ -1,0 +1,31 @@
+---
+interface Props {
+	quote: string;
+	name: string;
+	roleAtTime: string;
+	current?: string;
+	full?: string;
+	linkedin?: boolean;
+}
+const { quote, name, roleAtTime, current, full, linkedin = false } = Astro.props;
+---
+
+<blockquote class="pull-quote reveal">
+	<p class="mark" aria-hidden="true">&ldquo;</p>
+	<p class="quote">{quote}</p>
+	<div class="attribution">
+		<p>{name} &middot; {roleAtTime}</p>
+		{current && <span class="now">now: {current}</span>}
+		{linkedin && (
+			<a class="linkedin" href="https://www.linkedin.com/in/aaronamerling/details/recommendations/" target="_blank">
+				LinkedIn
+			</a>
+		)}
+	</div>
+	{full && (
+		<details>
+			<summary>Read full recommendation</summary>
+			<p>{full}</p>
+		</details>
+	)}
+</blockquote>

@@ -3,14 +3,11 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const blog = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
 	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
@@ -18,17 +15,24 @@ const blog = defineCollection({
 });
 
 const work = defineCollection({
-	// Load Markdown files in the `src/content/work/` directory.
 	loader: glob({ base: './src/content/work', pattern: '**/*.md' }),
 	schema: z.object({
-		title: z.string(),
+		headline: z.string(),
+		dek: z.string(),
 		client: z.string(),
-		summary: z.string(),
-		challenge: z.string(),
-		solution: z.string(),
-		results: z.array(z.string()),
 		order: z.number(),
-		scope: z.string().optional(),
+		whereThingsStood: z.string(),
+		theCall: z.string(),
+		whatGotBuilt: z.array(z.string()),
+		metrics: z.array(
+			z.object({
+				value: z.string(),
+				label: z.string(),
+				citation: z.string(),
+			}),
+		),
+		whatIdDoDifferently: z.string().optional(),
+		scope: z.string(),
 		quotes: z
 			.array(
 				z.object({
@@ -36,9 +40,12 @@ const work = defineCollection({
 					name: z.string(),
 					roleAtTime: z.string(),
 					current: z.string().optional(),
+					full: z.string().optional(),
+					linkedin: z.boolean().optional(),
 				}),
 			)
 			.optional(),
+		needs: z.array(z.string()).optional(),
 	}),
 });
 

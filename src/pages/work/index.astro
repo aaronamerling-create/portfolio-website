@@ -1,78 +1,27 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
+import PageLayout from '../../layouts/PageLayout.astro';
 
 const items = (await getCollection('work')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead
-			title="Work — Aaron Amerling"
-			description="Selected growth marketing case studies from Aaron Amerling."
-		/>
-		<style>
-			main {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
+<PageLayout
+	title="Work · Aaron Amerling"
+	description="Nine case studies in growth, applied AI, org design and product marketing."
+>
+	<div class="wrap section-lg">
+		<p class="eyebrow">Work</p>
+		<h1>Case studies</h1>
+		<div class="case-list">
+			{
+				items.map((item) => (
+					<a class="case-row reveal" href={`${import.meta.env.BASE_URL}work/${item.id}/`}>
+						<p class="eyebrow client">{item.data.client}</p>
+						<h3>{item.data.headline}</h3>
+						<p class="dek">{item.data.dek}</p>
+					</a>
+				))
 			}
-			.page-head {
-				margin-bottom: 2em;
-			}
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
-				gap: 1.25em;
-			}
-			li a {
-				display: block;
-			}
-			.client {
-				margin: 0 0 0.35em 0;
-				color: var(--accent);
-				font-size: 0.85rem;
-				text-transform: uppercase;
-				letter-spacing: 0.04em;
-				font-weight: 700;
-			}
-			.title {
-				margin: 0 0 0.5em 0;
-				color: rgb(var(--black));
-			}
-			.summary {
-				margin: 0;
-				color: rgb(var(--gray));
-			}
-		</style>
-	</head>
-	<body>
-		<Header />
-		<main>
-			<div class="page-head">
-				<p class="eyebrow">Selected work</p>
-				<h1>Case studies</h1>
-			</div>
-			<ul>
-				{
-					items.map((item) => (
-						<li>
-							<a class="card" href={`${import.meta.env.BASE_URL}work/${item.id}/`}>
-								<p class="client">{item.data.client}</p>
-								<h2 class="title">{item.data.title}</h2>
-								<p class="summary">{item.data.summary}</p>
-							</a>
-						</li>
-					))
-				}
-			</ul>
-		</main>
-		<Footer />
-	</body>
-</html>
+		</div>
+	</div>
+</PageLayout>

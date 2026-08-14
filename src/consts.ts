@@ -1,38 +1,149 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
-
 export const SITE_TITLE = 'Aaron Amerling';
-export const SITE_DESCRIPTION = 'Growth & Demand Generation Leader | Applied AI and GEO';
+export const SITE_DESCRIPTION =
+	'Marketing and product leader. 60-person organizations, $40M budgets, five U.S. patents, and AEO and GEO running as live growth channels.';
+
+export const PERSON_SCHEMA = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Aaron Amerling',
+	jobTitle: 'Chief Marketing Officer',
+	description:
+		'Marketing and product leader specializing in growth, applied AI, answer engine optimization and marketing organization design. Co-inventor on five U.S. patents.',
+	url: 'https://aaronamerling.com',
+	email: 'mailto:aaronamerling@gmail.com',
+	address: {
+		'@type': 'PostalAddress',
+		addressLocality: 'San Diego',
+		addressRegion: 'CA',
+		addressCountry: 'US',
+	},
+	sameAs: [
+		'https://www.linkedin.com/in/aaronamerling/',
+		'https://patents.justia.com/inventor/aaron-amerling',
+	],
+	alumniOf: [
+		{ '@type': 'CollegeOrUniversity', name: 'University of California, Santa Cruz' },
+		{ '@type': 'CollegeOrUniversity', name: 'San Diego State University' },
+	],
+	knowsAbout: [
+		'Marketing strategy',
+		'Answer engine optimization',
+		'Generative engine optimization',
+		'Applied artificial intelligence in marketing',
+		'Go-to-market strategy',
+		'Demand generation',
+		'Product marketing',
+		'Marketing organization design',
+		'Brand positioning',
+	],
+	award: [
+		'Co-inventor, five U.S. patents, trust-network architecture',
+		'Runner-up, CONNECT Most Innovative Product of the Year, Mobile Apps',
+		'International Communicator Award',
+		'Three International Telly Awards, Digital Advertising',
+		'Nickelodeon Fellowship',
+		'20th Century Fox New Writers Award',
+	],
+};
 
 export interface Testimonial {
 	quote: string;
 	name: string;
 	title: string;
 	current?: string;
+	full?: string;
+	linkedin?: boolean;
 }
 
-export interface Brand {
+export interface LogoItem {
 	name: string;
+	caption: string;
 	logo?: string;
 }
 
-export const BRANDS: Brand[] = [
-	{ name: 'Disney', logo: 'disney.svg' },
-	{ name: 'Meta', logo: 'meta.svg' },
-	{ name: 'Best Buy Health', logo: 'best-buy.svg' },
-	{ name: 'Dior', logo: 'dior.svg' },
-	{ name: 'Square Enix', logo: 'square-enix.svg' },
-	{ name: 'Ubisoft', logo: 'ubisoft.svg' },
-	{ name: 'DirecTV', logo: 'directv.svg' },
-	{ name: 'VMware', logo: 'vmware.svg' },
-	{ name: 'Ripple Labs', logo: 'ripple.svg' },
-	{ name: 'GAIN Credit', logo: 'gain-credit.png' },
-	{ name: 'GoFundMe', logo: 'gofundme.svg' },
-	{ name: 'Colgate', logo: 'colgate.svg' },
-	{ name: 'Tony Robbins', logo: 'tony-robbins.jpg' },
-	{ name: 'Pardee Homes', logo: 'pardee-homes.jpg' },
-	{ name: 'Yahoo', logo: 'yahoo.svg' },
-	{ name: 'American Medical Response', logo: 'amr.png' },
+export interface LogoRow {
+	label: string;
+	items: LogoItem[];
+}
+
+export const LOGO_ROWS: LogoRow[] = [
+	{
+		label: 'In house',
+		items: [
+			{ name: 'Etna Interactive', caption: 'Chief Marketing Officer' },
+			{
+				name: 'Best Buy Health (GreatCall)',
+				caption: 'Sr. Manager, Digital and Mobile Product and Marketing',
+				logo: 'best-buy.svg',
+			},
+			{
+				name: 'GAIN Credit',
+				caption: 'Sr. Manager, Digital Product and Marketing',
+				logo: 'gain-credit.png',
+			},
+			{
+				name: 'Voxox / Telcentris',
+				caption: 'Director of Marketing and Product Innovation',
+			},
+			{
+				name: 'Robbins Research International (Tony Robbins)',
+				caption: 'Writer and Marketing Communications Lead',
+				logo: 'tony-robbins.jpg',
+			},
+		],
+	},
+	{
+		label: 'Agency and strategy',
+		items: [
+			{ name: 'Disney', caption: 'Campaign strategy, via The Lemonade Agency', logo: 'disney.svg' },
+			{ name: 'Meta', caption: 'Marketing strategy, via The Lemonade Agency', logo: 'meta.svg' },
+			{
+				name: 'Ubisoft',
+				caption: 'Launch go-to-market, via The Lemonade Agency',
+				logo: 'ubisoft.svg',
+			},
+			{
+				name: 'Square Enix',
+				caption: 'Marketing strategy, via The Lemonade Agency',
+				logo: 'square-enix.svg',
+			},
+			{
+				name: 'Dior',
+				caption: 'NFT and crypto brand strategy, via The Lemonade Agency',
+				logo: 'dior.svg',
+			},
+			{
+				name: 'DirecTV',
+				caption: 'Marketing strategy, via The Lemonade Agency',
+				logo: 'directv.svg',
+			},
+			{
+				name: 'The San Francisco Marathon',
+				caption: 'Brand turnaround strategy, via The Lemonade Agency',
+			},
+			{ name: 'VMware', caption: 'Agency team lead, via Team Lewis', logo: 'vmware.svg' },
+			{ name: 'Ripple Labs', caption: 'Agency team lead, via Team Lewis', logo: 'ripple.svg' },
+			{ name: 'Yahoo', caption: 'Branding for Yahoo Current TV, via Scenefour', logo: 'yahoo.svg' },
+			{
+				name: 'Colgate',
+				caption: 'Paid social for a D2C oral care brand, via Amasa Agency',
+				logo: 'colgate.svg',
+			},
+		],
+	},
+	{
+		label: 'Advisory',
+		items: [
+			{ name: 'GoFundMe', caption: 'Early marketing advisor', logo: 'gofundme.svg' },
+			{ name: 'Steno.ai', caption: "Strategic advisor, Techstars '23" },
+			{ name: 'TrendSource', caption: 'Strategic marketing advisor' },
+			{
+				name: 'American Medical Response (AMR)',
+				caption: 'Crisis and search strategy advisor',
+				logo: 'amr.png',
+			},
+		],
+	},
 ];
 
 export const FEATURED_QUOTE: Testimonial = {
@@ -67,16 +178,43 @@ export const TESTIMONIALS: Testimonial[] = [
 		name: 'Ryan Windham',
 		title: 'Founder & VC',
 	},
-	{
-		quote: "So far he's been the best manager I've ever had.",
-		name: 'Kristina Simmons',
-		title: 'Direct report at GreatCall',
-		current: 'Sr. Marketing Manager, Quiksilver',
-	},
-	{
-		quote: 'My go-to innovator of marketing strategy.',
-		name: 'Sarah Rowlett',
-		title: 'Senior Account Director, TrendSource',
-		current: 'Account Manager (ex-Google)',
-	},
 ];
+
+export const CLAIM_QUOTES = {
+	growth: [
+		{
+			quote: 'Transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency.',
+			name: 'Richie Hannah',
+			title: 'Managed Aaron at GreatCall',
+			current: 'Founder and CEO, Yellow Cap Media',
+		},
+		{
+			quote: 'My go-to innovator of marketing strategy.',
+			name: 'Sarah Rowlett',
+			title: 'Senior Account Director, TrendSource',
+			current: 'Account Manager (ex-Google)',
+		},
+	],
+	org: [
+		{
+			quote: "So far he's been the best manager I've ever had.",
+			name: 'Kristina Simmons',
+			title: 'Direct report at GreatCall',
+			current: 'Sr. Marketing Manager, Quiksilver',
+		},
+	],
+	tech: [
+		{
+			quote: 'Helping us define niches, start our first paid advertising campaigns.',
+			name: 'Andy Ballester',
+			title: 'Co-founder, GoFundMe',
+			current: 'Co-founder and CPO, EyePop.ai',
+		},
+		{
+			quote: 'Build and present clear strategies to leaders that help ensure a brand remains relevant.',
+			name: 'Ed Mallory',
+			title: 'CEO, Voxox / Telcentris era',
+			current: 'CEO, Ring4.com',
+		},
+	],
+};

@@ -1,0 +1,27 @@
+# Aaron Amerling
+
+Marketing and product leader based in San Diego, California. Chief Marketing
+Officer most recently at Etna Interactive, where he led a 60-person marketing
+organization. Co-inventor on five U.S. patents for a trust-network architecture.
+Early marketing advisor to GoFundMe.
+
+Available for full-time marketing leadership roles (CMO at early stage, VP at
+mid-market, Director at enterprise) and for a small number of fractional and
+advisory engagements.
+
+Specializes in: growth marketing, answer engine optimization (AEO), generative
+engine optimization (GEO), applied AI inside marketing organizations,
+go-to-market strategy, demand generation, product marketing, and marketing
+organization design.
+
+## Pages
+- /: Overview, four areas of proof, selected work, brands and clients
+- /work: Nine case studies across growth, applied AI, org design, product marketing
+- /consulting: Advisory and fractional engagements
+- /about: Full background, applied AI, patents, recognition, education, FAQ
+- /writing: Notes on AEO, applied AI, and running marketing organizations
+- /resume: Career history and downloadable PDF
+
+## Contact
+aaronamerling@gmail.com
+https://www.linkedin.com/in/aaronamerling/
