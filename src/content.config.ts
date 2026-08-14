@@ -29,12 +29,15 @@ const work = defineCollection({
 		results: z.array(z.string()),
 		order: z.number(),
 		scope: z.string().optional(),
-		quote: z
-			.object({
-				text: z.string(),
-				name: z.string(),
-				title: z.string(),
-			})
+		quotes: z
+			.array(
+				z.object({
+					text: z.string(),
+					name: z.string(),
+					roleAtTime: z.string(),
+					current: z.string().optional(),
+				}),
+			)
 			.optional(),
 	}),
 });

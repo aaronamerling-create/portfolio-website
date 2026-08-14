@@ -11,4 +11,12 @@ results:
   - "Doubled organic traffic and lifted affiliate sales 500% through the company's first SEO and affiliate program"
   - "Built and ran the largest caregiver-focused Facebook group in the category, establishing GreatCall as the market leader in senior health and safety"
   - "Digital became the company's most efficient sales channel, contributing to its eventual acquisition by Best Buy"
+quotes:
+  - text: "Transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency."
+    name: "Richie Hannah"
+    roleAtTime: "Managed Aaron at GreatCall"
+    current: "Founder and CEO, Yellow Cap Media"
+  - text: "Forward-thinking digital marketer."
+    name: "Jessica DeFilippo Nenadal"
+    roleAtTime: "Direct report at GreatCall"
 ---

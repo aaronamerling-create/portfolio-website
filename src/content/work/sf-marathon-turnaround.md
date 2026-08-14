@@ -8,4 +8,8 @@ solution: "As VP of Strategy at The Lemonade Agency, built and led the brand rep
 results:
   - "Reversed years of decline in event turnout"
   - "Drove record turnout for the event under the new positioning"
+quotes:
+  - text: "Aaron always manages to connect all of those dots."
+    name: "Trevor Dudeck"
+    roleAtTime: "CEO, The Lemonade Agency"
 ---

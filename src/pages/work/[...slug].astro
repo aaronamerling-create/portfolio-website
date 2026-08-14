@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'work'>;
 
 const { data } = Astro.props;
-const { title, client, summary, challenge, solution, results, scope, quote } = data;
+const { title, client, summary, challenge, solution, results, scope, quotes } = data;
 ---
 
 <!doctype html>
@@ -71,8 +71,18 @@ const { title, client, summary, challenge, solution, results, scope, quote } = d
 				padding-left: 1em;
 				margin: 1.5em 0;
 			}
-			.quote-card {
+			.quotes {
+				display: flex;
+				flex-direction: column;
+				gap: 1.25em;
 				margin-top: 2.5em;
+			}
+			.quote-card .current {
+				display: block;
+				font-family: monospace;
+				font-weight: 400;
+				color: rgb(var(--gray));
+				font-size: 0.85rem;
 			}
 			.back {
 				display: inline-block;
@@ -101,17 +111,20 @@ const { title, client, summary, challenge, solution, results, scope, quote } = d
 					{results.map((result) => <li>{result}</li>)}
 				</ul>
 
-				{
-					quote && (
-						<div class="quote-card">
-							<p class="quote">{quote.text}</p>
-							<p class="attribution">
-								{quote.name}
-								<span>{quote.title}</span>
-							</p>
-						</div>
-					)
-				}
+				{quotes && quotes.length > 0 && (
+					<div class="quotes">
+						{quotes.map((q) => (
+							<div class="quote-card">
+								<p class="quote">{q.text}</p>
+								<p class="attribution">
+									{q.name}
+									<span>{q.roleAtTime}</span>
+									{q.current && <span class="current">now: {q.current}</span>}
+								</p>
+							</div>
+						))}
+					</div>
+				)}
 
 				<a class="back" href={`${import.meta.env.BASE_URL}work/`}>&larr; Back to Work</a>
 			</article>

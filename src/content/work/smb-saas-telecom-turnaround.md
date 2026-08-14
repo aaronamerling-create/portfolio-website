@@ -10,4 +10,12 @@ results:
   - "Delivered 300% growth in direct-to-consumer sales alongside a 40% increase in average order value"
   - "Recruited hundreds of affiliates, including placement on top comparison and review sites"
   - "Drove a 50% increase in conversion and an 80% increase in ARPU across the B2B/B2C suite"
+quotes:
+  - text: "Build and present clear strategies to leaders that help ensure a brand remains relevant."
+    name: "Ed Mallory"
+    roleAtTime: "CEO, Voxox / Telcentris"
+    current: "CEO, Ring4.com"
+  - text: "He's also extremely pragmatic."
+    name: "Kristin Beers"
+    roleAtTime: "Operations, Voxox / Telcentris (3 years working together)"
 ---

@@ -10,8 +10,4 @@ results:
   - "Shaped go-to-market and brand strategy for an AI venture inside the Techstars '23 cohort"
   - "Continue to mentor early-stage AI founders through the Techstars network"
 scope: "Strategic advisor and Techstars mentor, not an operating role. I identified the use case and target market and led the engagement that closed the flagship customer; the product, the technology, and day-to-day execution were the founding team's."
-quote:
-  text: "Aaron is the strategist you want to have in the room. Over the years we've worked together on campaigns for clients from indie game devs to Fortune 100 companies to provide high impact growth strategies that are custom fit for each business challenge. Aaron strikes the right balance between proven methodologies and disruptive tactics that leverage current trends and emerging technologies. Aaron brings blue flame thinking and passion to every project."
-  name: "Rowan Brooks"
-  title: "Agency collaborator"
 ---

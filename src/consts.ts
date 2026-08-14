@@ -8,6 +8,7 @@ export interface Testimonial {
 	quote: string;
 	name: string;
 	title: string;
+	current?: string;
 }
 
 export interface Brand {
@@ -34,6 +35,12 @@ export const BRANDS: Brand[] = [
 	{ name: 'American Medical Response', logo: 'amr.png' },
 ];
 
+export const FEATURED_QUOTE: Testimonial = {
+	quote: "I've yet to find an industry or a challenge he hasn't dealt with.",
+	name: 'Trevor Dudeck',
+	title: 'CEO, The Lemonade Agency',
+};
+
 export const TESTIMONIALS: Testimonial[] = [
 	{
 		quote:
@@ -44,19 +51,32 @@ export const TESTIMONIALS: Testimonial[] = [
 	{
 		quote:
 			'I really enjoyed working with Aaron at Etna. He was a strong leader who genuinely cared about his team, both professionally and personally. He made an effort to get to know the people he worked with and created an environment where people felt valued and supported. He also encouraged his leaders to think strategically, bring new ideas to the table, and take ownership of their areas of the business.',
-		name: 'Marla H.',
-		title: 'Etna Interactive',
+		name: 'Marla Husovsky',
+		title: 'Director of Digital Advertising, Etna Interactive (reported to Aaron)',
 	},
 	{
 		quote:
 			'Aaron was involved with helping GoFundMe with innovative marketing strategy, including helping us define niches, start our first paid advertising campaigns, working with our advertising agency, and training our first in-house marketing team.',
 		name: 'Andrew Ballester',
 		title: 'Co-Founder, GoFundMe',
+		current: 'Co-founder and CPO, EyePop.ai',
 	},
 	{
 		quote:
 			'Aaron is a great writer, marketing and branding advisor. He worked for me developing branding collateral, marketing strategy and a TV commercial for a company I was starting.',
 		name: 'Ryan Windham',
 		title: 'Founder & VC',
+	},
+	{
+		quote: "So far he's been the best manager I've ever had.",
+		name: 'Kristina Simmons',
+		title: 'Direct report at GreatCall',
+		current: 'Sr. Marketing Manager, Quiksilver',
+	},
+	{
+		quote: 'My go-to innovator of marketing strategy.',
+		name: 'Sarah Rowlett',
+		title: 'Senior Account Director, TrendSource',
+		current: 'Account Manager (ex-Google)',
 	},
 ];

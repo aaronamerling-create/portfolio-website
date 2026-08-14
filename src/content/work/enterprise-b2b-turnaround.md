@@ -10,4 +10,9 @@ results:
   - "Reached top-3 search rankings for core industry keywords, outranking incumbents including Nielsen"
   - "Replaced manual sales follow-up with automated, segmented email nurture flows"
   - "Earned press coverage in outlets including the New York Times and NPR"
+quotes:
+  - text: "My go-to innovator of marketing strategy."
+    name: "Sarah Rowlett"
+    roleAtTime: "Senior Account Director, TrendSource"
+    current: "Account Manager (ex-Google)"
 ---
