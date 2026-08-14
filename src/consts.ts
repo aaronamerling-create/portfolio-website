@@ -25,11 +25,13 @@ export const BRANDS: Brand[] = [
 	{ name: 'DirecTV', logo: 'directv.svg' },
 	{ name: 'VMware', logo: 'vmware.svg' },
 	{ name: 'Ripple Labs', logo: 'ripple.svg' },
-	{ name: 'GAIN Credit' },
+	{ name: 'GAIN Credit', logo: 'gain-credit.png' },
 	{ name: 'GoFundMe', logo: 'gofundme.svg' },
 	{ name: 'Colgate', logo: 'colgate.svg' },
+	{ name: 'Tony Robbins', logo: 'tony-robbins.jpg' },
+	{ name: 'Pardee Homes', logo: 'pardee-homes.jpg' },
 	{ name: 'Yahoo', logo: 'yahoo.svg' },
-	{ name: 'American Medical Response' },
+	{ name: 'American Medical Response', logo: 'amr.png' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
