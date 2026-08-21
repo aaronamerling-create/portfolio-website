@@ -1,6 +1,6 @@
 export const SITE_TITLE = 'Aaron Amerling';
 export const SITE_DESCRIPTION =
-	'Marketing and product leader. 60-person organizations, $40M budgets, five U.S. patents, and AEO and GEO running as live growth channels.';
+	'Marketing and product leader. 60-person organizations, £40M budgets, five U.S. patents, and AEO and GEO running as live growth channels.';
 
 export const PERSON_SCHEMA = {
 	'@context': 'https://schema.org',
@@ -143,6 +143,7 @@ export const LOGO_ROWS: LogoRow[] = [
 				caption: 'Crisis and search strategy advisor',
 				logo: 'amr.png',
 			},
+			{ name: 'Cloudhands (cloudhands.ai)', caption: 'Product & AI Consultant' },
 		],
 	},
 ];

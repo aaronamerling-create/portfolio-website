@@ -1,17 +1,17 @@
 ---
-headline: "$40M a year across three continents, and the hardest discipline was killing things."
+headline: "£40M a year across three continents, and the hardest discipline was killing things."
 dek: "PPC, display and affiliate across Lending Stream and Drafty, run by a team split between San Diego, London and Chennai. Top-performing sales channel inside six months."
 client: "GAIN Credit"
 order: 5
-whereThingsStood: "GAIN Credit ran a $40M-plus annual digital marketing budget across PPC, display and affiliate channels for its Lending Stream and Drafty brands, with a team split across San Diego, London and Chennai that had not yet been proven as a top sales channel."
+whereThingsStood: "GAIN Credit ran a £40M-plus (roughly $50M) annual digital marketing budget across PPC, display and affiliate channels for its Lending Stream and Drafty brands, with a team split across San Diego, London and Chennai that had not yet been proven as a top sales channel."
 theCall: "With a budget that size across regulated lending brands, the constraint was never finding more channels to add. It was deciding what to stop funding so the channels that were actually working could take the budget. <!-- NEEDS: the specific channel or program cut, and why -->"
 whatGotBuilt:
-  - "Managed the $40M+ budget across PPC, display and affiliate for the Lending Stream and Drafty brands"
+  - "Managed the £40M+ budget across PPC, display and affiliate for the Lending Stream and Drafty brands"
   - "Ran a distributed team across San Diego, London and Chennai"
   - "Developed product marketing strategy for a new lending brand"
 metrics:
-  - value: "$40M+"
-    label: "annual digital marketing budget managed"
+  - value: "£40M+"
+    label: "annual digital marketing budget managed (roughly $50M)"
     citation: "GAIN Credit, 2016 to 2017. Sr. Manager, Digital Product and Marketing."
   - value: "6 months"
     label: "for the distributed team to become the company's top-performing sales channel"

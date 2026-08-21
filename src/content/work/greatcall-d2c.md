@@ -11,7 +11,12 @@ whatGotBuilt:
   - "Launched the company's first SEO and affiliate program"
   - "Built and ran the company's first agile mobile apps product team"
   - "Built and ran the largest caregiver-focused Facebook group in the category"
+  - "Commissioned and ran a $1M audience research study with Nielsen, using focus groups and interviews to define the company's core demographics and inform product and positioning"
+  - "Led the company's CES presence, built around the mobile apps launch"
 metrics:
+  - value: "$250K to tens of millions"
+    label: "annual digital marketing budget grown on the strength of performance"
+    citation: "GreatCall, Sr. Manager, Digital and Mobile Product and Marketing."
   - value: "400%"
     label: "sales increase, CPA cut by roughly two thirds in one year"
     citation: "GreatCall (now Best Buy Health), 2013 to 2014."
@@ -20,6 +25,9 @@ metrics:
     citation: "GreatCall, 2012 to 2016. App Store and Google Play."
   - value: "500%"
     label: "lift in affiliate sales, with organic traffic doubled through the company's first SEO and affiliate program"
+    citation: "GreatCall, Sr. Manager, Digital and Mobile Product and Marketing."
+  - value: "$1M"
+    label: "audience research study commissioned and run with Nielsen to define core demographics"
     citation: "GreatCall, Sr. Manager, Digital and Mobile Product and Marketing."
 scope: "Sr. Manager, Digital and Mobile Product and Marketing. Built the D2C digital function from scratch, ran the first agile mobile product team, managed direct reports plus fourteen agencies and vendors."
 quotes:
