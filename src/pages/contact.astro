@@ -39,24 +39,31 @@ import PageLayout from '../layouts/PageLayout.astro';
 				<label for="message">What's on your mind?</label>
 				<textarea id="message" name="message"></textarea>
 			</div>
+
+			<input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+			<input type="hidden" name="_template" value="table" />
+			<input type="hidden" name="_captcha" value="false" />
+
 			<button type="submit" class="btn btn-accent">Send message</button>
 			<p id="form-status" class="mono status" role="status"></p>
 		</form>
 	</div>
 
 	<script>
+		const ENDPOINT = 'https://formsubmit.co/ajax/aaronamerling@gmail.com';
+
 		const params = new URLSearchParams(window.location.search);
-		const reason = params.get('reason');
-		if (reason === 'consulting') {
+		const reasonParam = params.get('reason');
+		if (reasonParam === 'consulting') {
 			const select = document.getElementById('reason') as HTMLSelectElement | null;
 			if (select) select.value = 'Exploring consulting or advisory';
 		}
 
 		const form = document.getElementById('contact-form') as HTMLFormElement | null;
 		const status = document.getElementById('form-status');
-		form?.addEventListener('submit', (e) => {
-			e.preventDefault();
-			const data = new FormData(form);
+		const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+
+		function mailtoFallback(data: FormData) {
 			const subject = `Portfolio contact: ${data.get('reason')}`;
 			const body = [
 				`Name: ${data.get('name')}`,
@@ -65,11 +72,31 @@ import PageLayout from '../layouts/PageLayout.astro';
 				'',
 				String(data.get('message') || ''),
 			].join('\n');
+			window.location.href = `mailto:aaronamerling@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		}
+
+		form?.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const data = new FormData(form);
+			data.set('_subject', `Portfolio contact: ${data.get('reason')}`);
+
+			if (submitBtn) submitBtn.disabled = true;
+			if (status) status.textContent = 'Sending...';
+
 			try {
-				window.location.href = `mailto:aaronamerling@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+				const res = await fetch(ENDPOINT, {
+					method: 'POST',
+					headers: { Accept: 'application/json' },
+					body: data,
+				});
+				if (!res.ok) throw new Error(`Request failed: ${res.status}`);
 				if (status) status.textContent = 'Message sent. I reply within a day, usually sooner.';
+				form.reset();
 			} catch {
-				if (status) status.textContent = "That didn't send. Email aaronamerling@gmail.com instead.";
+				if (status) status.textContent = "That didn't send automatically, opening your email client instead.";
+				mailtoFallback(data);
+			} finally {
+				if (submitBtn) submitBtn.disabled = false;
 			}
 		});
 	</script>
@@ -78,5 +105,12 @@ import PageLayout from '../layouts/PageLayout.astro';
 <style>
 	.status {
 		margin-top: 1em;
+	}
+	.honey {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		opacity: 0;
 	}
 </style>
