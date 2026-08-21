@@ -90,7 +90,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'Robbins Research International (Tony Robbins)',
 				caption: 'Writer and Marketing Communications Lead',
-				logo: 'tony-robbins.jpg',
+				logo: 'tony-robbins.png',
 			},
 			{ name: 'Ziff Davis', caption: 'Marketing Communications Lead', logo: 'ziff-davis.webp' },
 			{
@@ -159,7 +159,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'Cloudhands (cloudhands.ai)',
 				caption: 'Product & AI Consultant',
-				logo: 'cloudhands.jpeg',
+				logo: 'cloudhands.png',
 				large: true,
 			},
 		],
