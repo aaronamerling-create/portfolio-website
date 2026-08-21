@@ -177,7 +177,7 @@ export const TESTIMONIALS: Testimonial[] = [
 		quote:
 			"Aaron is the strategist you want to have in the room. Over the years we've worked together on campaigns for clients from indie game devs to Fortune 100 companies to provide high impact growth strategies that are custom fit for each business challenge. Aaron strikes the right balance between proven methodologies and disruptive tactics that leverage current trends and emerging technologies. Aaron brings blue flame thinking and passion to every project.",
 		name: 'Rowan Brooks',
-		title: 'Agency collaborator',
+		title: 'Chief Creative Officer, The Lemonade Agency',
 	},
 	{
 		quote:
