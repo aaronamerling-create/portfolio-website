@@ -7,10 +7,10 @@ interface Props {
 const { value, label, citation } = Astro.props;
 ---
 
-<div class="metric-row reveal">
+<div class="metric-row">
 	<div>
-		<p class="value">{value}</p>
-		<p class="label">{label}</p>
+		<p class="value reveal zoom">{value}</p>
+		<p class="label reveal">{label}</p>
 	</div>
-	<div class="citation">{citation}</div>
+	<div class="citation reveal">{citation}</div>
 </div>

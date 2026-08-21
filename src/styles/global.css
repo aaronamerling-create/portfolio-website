@@ -439,18 +439,60 @@ section {
 /* --- Motion --- */
 .reveal {
 	opacity: 0;
-	transform: translateY(8px);
-	transition: opacity 320ms ease, transform 320ms ease;
+	transform: translateY(10px);
+	transition: opacity 480ms cubic-bezier(0.16, 1, 0.3, 1), transform 480ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.is-visible {
 	opacity: 1;
 	transform: translateY(0);
 }
+.reveal.zoom {
+	transform: translateY(10px) scale(0.94);
+	transition: opacity 560ms cubic-bezier(0.16, 1, 0.3, 1), transform 560ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.zoom.is-visible {
+	transform: translateY(0) scale(1);
+}
+
+header {
+	transition: box-shadow 240ms ease, background 240ms ease;
+}
+header.is-scrolled {
+	box-shadow: 0 8px 24px rgba(22, 25, 28, 6%);
+}
+
+[data-parallax] {
+	will-change: transform;
+}
+
+.btn {
+	transition: background 200ms ease, color 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease;
+}
+.btn:hover {
+	transform: translateY(-2px);
+}
+.btn-accent:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(var(--accent-soft), 30%);
+}
+
 @media (prefers-reduced-motion: reduce) {
-	.reveal {
+	.reveal,
+	.reveal.zoom {
 		opacity: 1;
 		transform: none;
 		transition: none;
+	}
+	.btn,
+	.btn-accent {
+		transition: background 200ms ease, color 200ms ease;
+	}
+	.btn:hover,
+	.btn-accent:hover {
+		transform: none;
+	}
+	[data-parallax] {
+		transform: none !important;
 	}
 	html {
 		scroll-behavior: auto;

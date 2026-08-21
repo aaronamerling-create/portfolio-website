@@ -38,6 +38,36 @@ const { title, description, schema } = Astro.props;
 				(el as HTMLElement).style.transitionDelay = `${(i % 6) * 60}ms`;
 				io.observe(el);
 			});
+
+			const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			const header = document.querySelector('header');
+			const parallaxEls = Array.from(document.querySelectorAll<HTMLElement>('[data-parallax]'));
+
+			if (!reduceMotion && (header || parallaxEls.length)) {
+				let ticking = false;
+				const onScroll = () => {
+					if (ticking) return;
+					ticking = true;
+					requestAnimationFrame(() => {
+						if (header) header.classList.toggle('is-scrolled', window.scrollY > 8);
+						for (const el of parallaxEls) {
+							const factor = parseFloat(el.dataset.parallax || '0.1');
+							const rect = el.getBoundingClientRect();
+							const centerOffset = rect.top + rect.height / 2 - window.innerHeight / 2;
+							el.style.transform = `translateY(${(-centerOffset * factor).toFixed(1)}px)`;
+						}
+						ticking = false;
+					});
+				};
+				onScroll();
+				window.addEventListener('scroll', onScroll, { passive: true });
+			} else if (header) {
+				window.addEventListener(
+					'scroll',
+					() => header.classList.toggle('is-scrolled', window.scrollY > 8),
+					{ passive: true },
+				);
+			}
 		</script>
 	</body>
 </html>

@@ -68,7 +68,9 @@ const faqSchema = {
 				<p class="eyebrow">About</p>
 				<h1>Aaron Amerling</h1>
 			</div>
-			<Image class="about-photo reveal" src={headshot} alt="Aaron Amerling" width={160} height={160} />
+			<div class="about-photo-wrap" data-parallax="0.05">
+				<Image class="about-photo reveal" src={headshot} alt="Aaron Amerling" width={160} height={160} />
+			</div>
 		</div>
 
 		<p class="reveal">
@@ -153,12 +155,15 @@ const faqSchema = {
 		justify-content: space-between;
 		gap: 2em;
 	}
+	.about-photo-wrap {
+		flex-shrink: 0;
+	}
 	.about-head :global(.about-photo) {
+		display: block;
 		width: 120px;
 		height: 120px;
 		object-fit: cover;
 		border: 1px solid var(--rule);
-		flex-shrink: 0;
 	}
 	@media (max-width: 560px) {
 		.about-head {

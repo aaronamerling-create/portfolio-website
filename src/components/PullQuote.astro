@@ -10,10 +10,10 @@ interface Props {
 const { quote, name, roleAtTime, current, full, linkedin = false } = Astro.props;
 ---
 
-<blockquote class="pull-quote reveal">
-	<p class="mark" aria-hidden="true">&ldquo;</p>
-	<p class="quote">{quote}</p>
-	<div class="attribution">
+<blockquote class="pull-quote">
+	<p class="mark reveal zoom" aria-hidden="true">&ldquo;</p>
+	<p class="quote reveal">{quote}</p>
+	<div class="attribution reveal">
 		<p>{name} &middot; {roleAtTime}</p>
 		{current && <span class="now">now: {current}</span>}
 		{linkedin && (
