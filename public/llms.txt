@@ -24,5 +24,5 @@ organization design.
 - /resume: Career history and downloadable PDF
 
 ## Contact
-aaronamerling@gmail.com
+https://aaronamerling.com/contact
 https://www.linkedin.com/in/aaronamerling/

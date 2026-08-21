@@ -10,7 +10,6 @@ export const PERSON_SCHEMA = {
 	description:
 		'Marketing and product leader specializing in growth, applied AI, answer engine optimization and marketing organization design. Co-inventor on five U.S. patents.',
 	url: 'https://aaronamerling.com',
-	email: 'mailto:aaronamerling@gmail.com',
 	address: {
 		'@type': 'PostalAddress',
 		addressLocality: 'San Diego',
