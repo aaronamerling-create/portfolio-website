@@ -31,7 +31,7 @@ const schema = {
 			{pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
 		</p>
 		<h1 class="reveal">{title}</h1>
-		<div class="reveal">
+		<div>
 			<Content />
 		</div>
 		<p class="reveal"><a href={`${import.meta.env.BASE_URL}blog/`}>&larr; Back to blog</a></p>
