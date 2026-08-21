@@ -187,6 +187,12 @@ export const TESTIMONIALS: Testimonial[] = [
 	},
 	{
 		quote:
+			'What always stood out to me about Aaron was his ability to see the bigger picture. He is a creative, strategic thinker who could step back from the immediate challenge, identify the larger opportunity, and push our thinking in new directions. As my supervisor at Etna, Aaron regularly asked for my perspective on complex client, product, and organizational questions. He trusted my expertise, challenged my thinking in productive ways, and gave me room to take ownership. I especially appreciated that he treated me as a thought partner rather than simply someone responsible for carrying out a directive.',
+		name: 'Jessica White',
+		title: 'Director of Marketing Strategy, Etna Interactive (reported to Aaron)',
+	},
+	{
+		quote:
 			'Aaron was involved with helping GoFundMe with innovative marketing strategy, including helping us define niches, start our first paid advertising campaigns, working with our advertising agency, and training our first in-house marketing team.',
 		name: 'Andrew Ballester',
 		title: 'Co-Founder, GoFundMe',

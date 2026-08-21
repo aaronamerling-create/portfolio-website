@@ -4,7 +4,7 @@ import headshot from '../assets/photos/aaron-amerling.jpg';
 import CitationMetric from '../components/CitationMetric.astro';
 import PullQuote from '../components/PullQuote.astro';
 import PageLayout from '../layouts/PageLayout.astro';
-import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION } from '../consts';
+import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS } from '../consts';
 ---
 
 <PageLayout title="Aaron Amerling · Chief Marketing Officer and Product Leader" description={SITE_DESCRIPTION}>
@@ -99,6 +99,22 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION } from '../co
 				<PullQuote quote={q.quote} name={q.name} roleAtTime={q.title} current={q.current} />
 			))}
 		</section>
+	</div>
+
+	<div class="wrap section-lg">
+		<p class="eyebrow reveal">What people say</p>
+		<h2 class="reveal">Recommendations</h2>
+		<div class="rec-grid">
+			{TESTIMONIALS.map((t) => (
+				<div class="rec-card reveal">
+					<p class="rec-quote">{t.quote}</p>
+					<p class="rec-attribution">
+						{t.name} &middot; {t.title}
+						{t.current && <span class="now">now: {t.current}</span>}
+					</p>
+				</div>
+			))}
+		</div>
 	</div>
 
 	<div class="wrap section-lg">
@@ -221,6 +237,43 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION } from '../co
 			padding-right: 0;
 			padding-bottom: 2em;
 		}
+	}
+	.rec-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+		margin-top: 2em;
+	}
+	@media (max-width: 720px) {
+		.rec-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	.rec-card {
+		border: 1px solid var(--rule);
+		padding: 1.75em;
+	}
+	.rec-quote {
+		font-size: 17px;
+		color: var(--ink);
+		margin-bottom: 1em;
+	}
+	.rec-quote::before {
+		content: '\201C';
+		color: var(--accent);
+		font-family: var(--font-display), sans-serif;
+		font-weight: 700;
+	}
+	.rec-attribution {
+		font-family: var(--font-mono), monospace;
+		font-size: 12px;
+		color: var(--ink);
+		margin: 0;
+		line-height: 1.6;
+	}
+	.rec-attribution .now {
+		display: block;
+		color: var(--muted);
 	}
 	.text-mark {
 		font-family: var(--font-display), sans-serif;
