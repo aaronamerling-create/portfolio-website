@@ -19,7 +19,8 @@ organization design.
 - /work: Nine case studies across growth, applied AI, org design, product marketing
 - /consulting: Advisory and fractional engagements
 - /about: Full background, applied AI, patents, recognition, education, FAQ
-- /writing: Notes on AEO, applied AI, and running marketing organizations
+- /pov: Marketing philosophy, the three-act marketing journey
+- /blog: Notes on AEO, applied AI, and running marketing organizations
 - /resume: Career history and downloadable PDF
 
 ## Contact

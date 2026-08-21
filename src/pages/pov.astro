@@ -1,0 +1,134 @@
+---
+import { Image } from 'astro:assets';
+import diagram from '../assets/pov/three-act-marketing-journey.png';
+import PageLayout from '../layouts/PageLayout.astro';
+---
+
+<PageLayout
+	title="My POV · Aaron Amerling"
+	description="Marketing has three acts. A marketing philosophy built on story structure and the Hero's Journey, from Aaron Amerling."
+>
+	<div class="wrap section-lg prose">
+		<p class="eyebrow reveal">My POV</p>
+		<h1 class="reveal">Marketing has three acts.</h1>
+
+		<p class="reveal">I came to marketing through writing.</p>
+		<p class="reveal">
+			I wrote for television. I've written songs and musicals. I've spent a lot of my life
+			thinking about characters, motivation, conflict, pacing and, most importantly, what makes
+			someone care enough to keep watching.
+		</p>
+		<p class="reveal">Eventually, I realized I was applying the same thinking to marketing.</p>
+		<p class="reveal">Because marketing isn't really about messages.</p>
+		<p class="reveal lede"><strong>It's about movement.</strong></p>
+	</div>
+
+	<div class="wrap section-lg diagram-block reveal">
+		<Image src={diagram} alt="The Three-Act Marketing Journey: how marketing, story structure, and the Hero's Journey align" />
+		<p class="mono caption">The three-act marketing journey. How marketing, story structure and the Hero's Journey align.</p>
+	</div>
+
+	<div class="wrap prose">
+		<h2 class="reveal">Act I: The Buyer</h2>
+		<p class="reveal">Every story starts by understanding the protagonist.</p>
+		<p class="reveal">In marketing, that's the buyer.</p>
+		<p class="reveal">
+			Who are they? What do they want? What problem are they actually trying to solve? What do
+			they believe? What would have to happen for them to see their situation differently?
+		</p>
+		<p class="reveal">That's where strategy starts.</p>
+		<p class="reveal">Then comes the first turning point.</p>
+
+		<h3 class="reveal">AHA</h3>
+		<p class="reveal">The moment the buyer sees something they didn't see before.</p>
+		<p class="reveal beat"><em>That's my problem.</em></p>
+		<p class="reveal beat"><em>That's why this isn't working.</em></p>
+		<p class="reveal beat"><em>That's what I need.</em></p>
+		<p class="reveal">The AHA is the transition from Act I to Act II.</p>
+		<p class="reveal">
+			In the language of the Hero's Journey, it's the <strong>Call to Adventure</strong>, the
+			moment the protagonist encounters something that pulls them out of their ordinary world and
+			toward something new.
+		</p>
+
+		<h2 class="reveal">Act II: The Marketing Journey</h2>
+		<p class="reveal">Now the story moves.</p>
+		<p class="reveal">
+			Marketing's job is to take the buyer from recognition toward action. Every interaction
+			should move them somewhere, toward understanding, confidence, desire and ultimately a
+			decision.
+		</p>
+		<p class="reveal">The question isn't just:</p>
+		<p class="reveal beat"><em>What should we say?</em></p>
+		<p class="reveal">It's:</p>
+		<p class="reveal lede"><strong>What does this person need to understand next?</strong></p>
+		<p class="reveal">
+			The buyer encounters information, proof, objections, possibilities and choices. The best
+			marketing doesn't simply repeat a message. It creates momentum.
+		</p>
+		<p class="reveal">Eventually, they make a purchase.</p>
+		<p class="reveal">But that's not the end of the marketing journey.</p>
+		<p class="reveal">It's not even the beginning of the product experience.</p>
+
+		<h3 class="reveal">Activation</h3>
+		<p class="reveal">
+			<strong
+				>Activation is when the customer actually uses the thing they bought and experiences its
+				value.</strong
+			>
+		</p>
+		<p class="reveal">You can buy a car and never drive it.</p>
+		<p class="reveal">You can sign up for a digital service and never use it.</p>
+		<p class="reveal">You can create a social media account and never make your first post.</p>
+		<p class="reveal">You've acquired the product, but you haven't activated it.</p>
+		<p class="reveal">
+			Activation is the moment the customer crosses from <strong
+				>owning the product to experiencing the product.</strong
+			>
+		</p>
+		<p class="reveal">That's the transition from Act II to Act III.</p>
+
+		<h2 class="reveal">Act III: The Product Experience</h2>
+		<p class="reveal">This is where the promise gets tested.</p>
+		<p class="reveal lede"><strong>The product is the payoff.</strong></p>
+		<p class="reveal">The customer uses it. It solves the problem. Something changes.</p>
+		<p class="reveal">And this is where the Hero's Journey comes full circle.</p>
+		<p class="reveal">
+			The hero returns to the ordinary world, but they aren't the same person who left it. They
+			bring back the <strong>elixir</strong>, the thing they learned or gained on the journey.
+		</p>
+		<p class="reveal">That's what a great product should do.</p>
+		<p class="reveal">The customer returns to their life, but their life is better because of the experience.</p>
+		<p class="reveal">And when that happens, something powerful occurs.</p>
+		<p class="reveal">They tell someone about it.</p>
+		<p class="reveal">They become a repeat customer.</p>
+		<p class="reveal">They recommend it.</p>
+		<p class="reveal">They become an advocate.</p>
+		<p class="reveal">The story that began with a problem ends with a transformation.</p>
+	</div>
+</PageLayout>
+
+<style>
+	.lede {
+		font-size: 1.3rem;
+	}
+	.beat {
+		padding-left: 1.2em;
+		border-left: 2px solid var(--accent);
+		color: var(--muted);
+	}
+	.diagram-block {
+		padding-top: 0;
+	}
+	.diagram-block :global(img) {
+		width: 100%;
+		height: auto;
+		border: 1px solid var(--rule);
+		display: block;
+	}
+	.diagram-block .caption {
+		margin-top: 1em;
+		color: var(--muted);
+		font-size: 12px;
+	}
+</style>
