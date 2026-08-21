@@ -103,7 +103,7 @@ export const LOGO_ROWS: LogoRow[] = [
 	{
 		label: 'Agency and strategy',
 		items: [
-			{ name: 'Disney', caption: 'Campaign strategy, via The Lemonade Agency', logo: 'disney.svg' },
+			{ name: 'Disney Games', caption: 'Campaign strategy, via The Lemonade Agency', logo: 'disney.svg' },
 			{ name: 'Meta', caption: 'Marketing strategy, via The Lemonade Agency', logo: 'meta.svg' },
 			{
 				name: 'Ubisoft',
