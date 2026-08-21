@@ -111,7 +111,7 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION } from '../co
 				</div>
 				<div class="logo-grid">
 					{row.items.map((item) => (
-						<div class="logo-item">
+						<div class:list={['logo-item', { large: item.large }]}>
 							<div class="mark">
 								{item.logo ? (
 									<img src={`${import.meta.env.BASE_URL}logos/${item.logo}`} alt={item.name} loading="lazy" />

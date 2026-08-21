@@ -25,5 +25,5 @@ quotes:
   - text: "My go-to innovator of marketing strategy."
     name: "Sarah Rowlett"
     roleAtTime: "Senior Account Director, TrendSource"
-    current: "Account Manager (ex-Google)"
+    current: "Account Director (ex-Google)"
 ---

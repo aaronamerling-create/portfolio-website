@@ -345,6 +345,12 @@ section {
 	max-width: 100%;
 	object-fit: contain;
 }
+.logo-grid .logo-item.large .mark {
+	height: 40px;
+}
+.logo-grid .logo-item.large img {
+	height: 40px;
+}
 .logo-grid .logo-item .caption {
 	font-family: var(--font-mono), monospace;
 	font-size: 11px;

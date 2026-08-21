@@ -58,6 +58,8 @@ export interface LogoItem {
 	name: string;
 	caption: string;
 	logo?: string;
+	/** Icon-only marks (no wordmark text) read smaller than text logos at equal height; bump their render size to compensate. */
+	large?: boolean;
 }
 
 export interface LogoRow {
@@ -101,6 +103,7 @@ export const LOGO_ROWS: LogoRow[] = [
 				name: 'Ubisoft',
 				caption: 'Launch go-to-market, via The Lemonade Agency',
 				logo: 'ubisoft.svg',
+				large: true,
 			},
 			{
 				name: 'Square Enix',
@@ -135,14 +138,19 @@ export const LOGO_ROWS: LogoRow[] = [
 		label: 'Advisory',
 		items: [
 			{ name: 'GoFundMe', caption: 'Early marketing advisor', logo: 'gofundme.svg' },
-			{ name: 'Steno.ai', caption: "Strategic advisor, Techstars '23", logo: 'steno-ai.jpeg' },
+			{ name: 'Steno.ai', caption: 'Strategic advisor, Techstars mentor', logo: 'steno-ai.jpeg', large: true },
 			{ name: 'TrendSource', caption: 'Strategic marketing advisor', logo: 'trendsource.png' },
 			{
 				name: 'American Medical Response (AMR)',
 				caption: 'Crisis and search strategy advisor',
 				logo: 'amr.png',
 			},
-			{ name: 'Cloudhands (cloudhands.ai)', caption: 'Product & AI Consultant' },
+			{
+				name: 'Cloudhands (cloudhands.ai)',
+				caption: 'Product & AI Consultant',
+				logo: 'cloudhands.jpeg',
+				large: true,
+			},
 		],
 	},
 ];
@@ -193,7 +201,7 @@ export const CLAIM_QUOTES = {
 			quote: 'My go-to innovator of marketing strategy.',
 			name: 'Sarah Rowlett',
 			title: 'Senior Account Director, TrendSource',
-			current: 'Account Manager (ex-Google)',
+			current: 'Account Director (ex-Google)',
 		},
 	],
 	org: [
