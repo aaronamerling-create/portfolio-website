@@ -96,7 +96,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'Avatar: The Last Airbender (Nickelodeon)',
 				caption: 'TV Writer, Nickelodeon Fellowship',
-				logo: 'avatar.jpg',
+				logo: 'avatar.png',
 			},
 		],
 	},
@@ -141,7 +141,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'Pardee Homes',
 				caption: 'Print and digital advertising, via Zukor Design',
-				logo: 'pardee-homes.jpg',
+				logo: 'pardee-homes.png',
 			},
 		],
 	},
@@ -149,7 +149,7 @@ export const LOGO_ROWS: LogoRow[] = [
 		label: 'Advisory',
 		items: [
 			{ name: 'GoFundMe', caption: 'Early marketing advisor', logo: 'gofundme.svg' },
-			{ name: 'Steno.ai', caption: 'Strategic advisor, Techstars mentor', logo: 'steno-ai.jpeg', large: true },
+			{ name: 'Steno.ai', caption: 'Strategic advisor, Techstars mentor', logo: 'steno-ai.png', large: true },
 			{ name: 'TrendSource', caption: 'Strategic marketing advisor', logo: 'trendsource.png' },
 			{
 				name: 'American Medical Response (AMR)',
