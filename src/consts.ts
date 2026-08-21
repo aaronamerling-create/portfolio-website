@@ -92,6 +92,12 @@ export const LOGO_ROWS: LogoRow[] = [
 				caption: 'Writer and Marketing Communications Lead',
 				logo: 'tony-robbins.jpg',
 			},
+			{ name: 'Ziff Davis', caption: 'Marketing Communications Lead', logo: 'ziff-davis.webp' },
+			{
+				name: 'Avatar: The Last Airbender (Nickelodeon)',
+				caption: 'TV Writer, Nickelodeon Fellowship',
+				logo: 'avatar.jpg',
+			},
 		],
 	},
 	{
@@ -131,6 +137,11 @@ export const LOGO_ROWS: LogoRow[] = [
 				name: 'Colgate',
 				caption: 'Paid social for a D2C oral care brand, via Amasa Agency',
 				logo: 'colgate.svg',
+			},
+			{
+				name: 'Pardee Homes',
+				caption: 'Print and digital advertising, via Zukor Design',
+				logo: 'pardee-homes.jpg',
 			},
 		],
 	},
