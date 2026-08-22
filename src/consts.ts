@@ -181,9 +181,10 @@ export const TESTIMONIALS: Testimonial[] = [
 	},
 	{
 		quote:
-			'I really enjoyed working with Aaron at Etna. He was a strong leader who genuinely cared about his team, both professionally and personally. He made an effort to get to know the people he worked with and created an environment where people felt valued and supported. He also encouraged his leaders to think strategically, bring new ideas to the table, and take ownership of their areas of the business.',
-		name: 'Marla Husovsky',
-		title: 'Director of Digital Advertising, Etna Interactive (reported to Aaron)',
+			"Aaron has a well-honed set of skills across both product and marketing that are invaluable to any organization. His breadth of experience across the complete product lifecycle, from research and ideation to strategic planning and execution, is unmatched. Through his ability to make connections with prospects and customers and then learn an industry inside and out, he is able to build and present clear strategies to leaders that help ensure a brand, its products and the company as a whole remain relevant well into the future. It was a pleasure to work side by side with Aaron for years, and I am truly better for it.",
+		name: 'Ed Mallory',
+		title: 'CEO, Voxox / Telcentris era',
+		current: 'CEO, Ring4.com',
 	},
 	{
 		quote:
@@ -200,9 +201,9 @@ export const TESTIMONIALS: Testimonial[] = [
 	},
 	{
 		quote:
-			'Aaron is a great writer, marketing and branding advisor. He worked for me developing branding collateral, marketing strategy and a TV commercial for a company I was starting.',
-		name: 'Ryan Windham',
-		title: 'Founder & VC',
+			'Aaron is one of the most dedicated and focused digital marketing directors I have had the pleasure of working with over the past 10 years. He is an excellent communicator and an incredibly strategic thinker when it comes to delivering a true multi-channel digital marketing strategy. He also has an uncanny ability to execute and deliver at all levels. I learned a great deal from Aaron and hope to have the opportunity to work with him again in the future.',
+		name: 'Jeffrey Tompkins',
+		title: 'Director of Operations, Jacob Tyler Brand + Digital Agency',
 	},
 ];
 
