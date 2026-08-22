@@ -73,9 +73,18 @@ export const LOGO_ROWS: LogoRow[] = [
 		items: [
 			{ name: 'Etna Interactive', caption: 'Chief Marketing Officer', logo: 'etna-interactive.png' },
 			{
-				name: 'Best Buy Health (GreatCall)',
-				caption: 'Sr. Manager, Digital and Mobile Product and Marketing',
-				logo: 'best-buy.svg',
+				name: 'The Lemonade Agency',
+				caption: 'VP of Strategy',
+			},
+			{
+				name: 'Team Lewis',
+				caption: 'Managing Director, Digital USA',
+				logo: 'team-lewis.png',
+			},
+			{
+				name: 'Voxox / Telcentris',
+				caption: 'Director of Marketing and Product Innovation',
+				logo: 'voxox.png',
 			},
 			{
 				name: 'GAIN Credit',
@@ -83,9 +92,9 @@ export const LOGO_ROWS: LogoRow[] = [
 				logo: 'gain-credit.png',
 			},
 			{
-				name: 'Voxox / Telcentris',
-				caption: 'Director of Marketing and Product Innovation',
-				logo: 'voxox.png',
+				name: 'Best Buy Health (GreatCall)',
+				caption: 'Sr. Manager, Digital and Mobile Product and Marketing',
+				logo: 'best-buy.svg',
 			},
 			{
 				name: 'Robbins Research International (Tony Robbins)',
