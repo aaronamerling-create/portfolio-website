@@ -5,9 +5,8 @@ Officer most recently at Etna Interactive, where he led a 60-person marketing
 organization. Co-inventor on five U.S. patents for a trust-network architecture.
 Early marketing advisor to GoFundMe.
 
-Available for full-time marketing leadership roles (CMO at early stage, VP at
-mid-market, Director at enterprise) and for a small number of fractional and
-advisory engagements.
+Available for a small number of fractional and advisory engagements covering
+brand, go-to-market and applied AI, for founders and growth-stage teams.
 
 Specializes in: growth marketing, answer engine optimization (AEO), generative
 engine optimization (GEO), applied AI inside marketing organizations,
@@ -21,7 +20,6 @@ organization design.
 - /about: Full background, applied AI, patents, recognition, education, FAQ
 - /pov: Marketing philosophy, the three-act marketing journey
 - /blog: Notes on AEO, applied AI, and running marketing organizations
-- /resume: Career history and downloadable PDF
 
 ## Contact
 https://aaronamerling.com/contact

@@ -19,7 +19,6 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 			</p>
 			<div class="link-row reveal">
 				<a class="btn btn-accent" href={`${import.meta.env.BASE_URL}work/`}>Case studies</a>
-				<a class="btn" href={`${import.meta.env.BASE_URL}aaron-amerling-resume.pdf`}>Resume</a>
 				<a class="btn" href={`${import.meta.env.BASE_URL}contact/`}>Contact me</a>
 			</div>
 		</div>
@@ -129,17 +128,9 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 
 	<div class="wrap section-lg">
 		<h2 class="reveal">How to work with me</h2>
-		<div class="how-grid">
-			<div class="reveal">
-				<h3>Full-time leadership</h3>
-				<p>Will consider opportunities in senior leadership. San Diego or remote. Consumer, health, fintech, telecom, SaaS, entertainment, gaming and AI.</p>
-				<a href={`${import.meta.env.BASE_URL}aaron-amerling-resume.pdf`}>&rarr; Download resume</a>
-			</div>
-			<div class="reveal">
-				<h3>Advisory and fractional</h3>
-				<p>Brand, go-to-market and applied AI for founders and growth-stage teams. Currently taking a small number of engagements.</p>
-				<a href={`${import.meta.env.BASE_URL}consulting/`}>&rarr; How I work</a>
-			</div>
+		<div class="how-single reveal">
+			<p>Brand, go-to-market and applied AI for founders and growth-stage teams. Currently taking a small number of engagements.</p>
+			<a href={`${import.meta.env.BASE_URL}consulting/`}>&rarr; How I work</a>
 		</div>
 	</div>
 
@@ -167,12 +158,10 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 	<div class="wrap section-lg cta-block">
 		<h2 class="reveal">Let's build the next number together.</h2>
 		<p class="reveal">
-			If you're looking for a senior leader, let's talk. If you need advisory or fractional support
-			around brand, go-to-market or applied AI, reach out.
+			If you need advisory or fractional support around brand, go-to-market or applied AI, reach out.
 		</p>
 		<div class="link-row reveal">
 			<a class="btn btn-accent" href={`${import.meta.env.BASE_URL}contact/`}>Contact me</a>
-			<a class="btn" href={`${import.meta.env.BASE_URL}aaron-amerling-resume.pdf`}>Download resume</a>
 		</div>
 	</div>
 </PageLayout>
@@ -223,25 +212,11 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 	.claim .metrics {
 		margin: 2em 0;
 	}
-	.how-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3em;
+	.how-single {
+		max-width: 60ch;
 	}
-	.how-grid > div:first-child {
-		border-right: 1px solid var(--rule);
-		padding-right: 3em;
-	}
-	@media (max-width: 720px) {
-		.how-grid {
-			grid-template-columns: 1fr;
-		}
-		.how-grid > div:first-child {
-			border-right: none;
-			border-bottom: 1px solid var(--rule);
-			padding-right: 0;
-			padding-bottom: 2em;
-		}
+	.how-single p {
+		font-size: 1.1rem;
 	}
 	.rec-grid {
 		display: grid;
