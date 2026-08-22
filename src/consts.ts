@@ -205,6 +205,13 @@ export const TESTIMONIALS: Testimonial[] = [
 		name: 'Jeffrey Tompkins',
 		title: 'Director of Operations, Jacob Tyler Brand + Digital Agency',
 	},
+	{
+		quote:
+			"It was my pleasure to work closely with Aaron for over two years at GreatCall. He impressed me immediately with his drive, passion, speed and intelligence, and quickly built strong relationships as he worked across internal teams and external agencies. In his digital marketing role, Aaron transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency, and spearheaded many ideas and projects that quickly grew GreatCall's digital capabilities. Then, with focus on our mobile apps, he managed the teams that brought strategically-important apps to market, gaining us #1 positions in the iTunes and Google Play apps store medical category for not just one, but two of our apps. Aaron is fun to work with, and delivers concrete results. I'd happily recommend him to any company that needs best-in-class digital marketing and app management.",
+		name: 'Richie Hannah',
+		title: 'Managed Aaron at GreatCall',
+		current: 'Founder and CEO, Yellow Cap Media',
+	},
 ];
 
 export const CLAIM_QUOTES = {
