@@ -102,27 +102,6 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 	</div>
 
 	<div class="wrap section-lg">
-		<p class="eyebrow reveal">What people say</p>
-		<h2 class="reveal">Recommendations</h2>
-		<div class="rec-grid">
-			{TESTIMONIALS.map((t) => (
-				<div class="rec-card reveal">
-					<p class="rec-quote">{t.quote}</p>
-					<p class="rec-attribution">
-						{t.name} &middot; {t.title}
-						{t.current && <span class="now">now: {t.current}</span>}
-					</p>
-				</div>
-			))}
-		</div>
-		<p class="rec-more reveal">
-			<a href="https://www.linkedin.com/in/aaronamerling/details/recommendations/?detailScreenTabIndex=0" target="_blank">
-				Read more recommendations &rarr;
-			</a>
-		</p>
-	</div>
-
-	<div class="wrap section-lg">
 		<p class="eyebrow reveal">Selected clients and collaborators</p>
 		{LOGO_ROWS.map((row) => (
 			<div class="logo-row reveal">
@@ -162,6 +141,27 @@ import { CLAIM_QUOTES, FEATURED_QUOTE, LOGO_ROWS, SITE_DESCRIPTION, TESTIMONIALS
 				<a href={`${import.meta.env.BASE_URL}consulting/`}>&rarr; How I work</a>
 			</div>
 		</div>
+	</div>
+
+	<div class="wrap section-lg">
+		<p class="eyebrow reveal">What people say</p>
+		<h2 class="reveal">Recommendations</h2>
+		<div class="rec-grid">
+			{TESTIMONIALS.map((t) => (
+				<div class="rec-card reveal">
+					<p class="rec-quote">{t.quote}</p>
+					<p class="rec-attribution">
+						{t.name} &middot; {t.title}
+						{t.current && <span class="now">now: {t.current}</span>}
+					</p>
+				</div>
+			))}
+		</div>
+		<p class="rec-more reveal">
+			<a href="https://www.linkedin.com/in/aaronamerling/details/recommendations/?detailScreenTabIndex=0" target="_blank">
+				Read more recommendations &rarr;
+			</a>
+		</p>
 	</div>
 
 	<div class="wrap section-lg cta-block">
