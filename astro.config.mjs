@@ -6,8 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://aaronamerling-create.github.io',
-	base: '/portfolio-website/',
+	site: 'https://aaronamerling.com',
+	base: '/',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{
