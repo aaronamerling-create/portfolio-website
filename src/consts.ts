@@ -75,6 +75,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'The Lemonade Agency',
 				caption: 'VP of Strategy',
+				logo: 'lemonade.png',
 			},
 			{
 				name: 'Team Lewis',
