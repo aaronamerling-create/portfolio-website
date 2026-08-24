@@ -139,6 +139,7 @@ export const LOGO_ROWS: LogoRow[] = [
 			{
 				name: 'The San Francisco Marathon',
 				caption: 'Brand turnaround strategy, via The Lemonade Agency',
+				logo: 'sf-marathon.png',
 			},
 			{ name: 'VMware', caption: 'Agency team lead, via Team Lewis', logo: 'vmware.svg' },
 			{ name: 'Ripple Labs', caption: 'Agency team lead, via Team Lewis', logo: 'ripple.svg' },
