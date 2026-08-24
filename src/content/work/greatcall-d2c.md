@@ -33,7 +33,7 @@ scope: "Sr. Manager, Digital and Mobile Product and Marketing. Built the D2C dig
 quotes:
   - text: "Transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency."
     name: "Richie Hannah"
-    roleAtTime: "Managed Aaron at GreatCall"
+    roleAtTime: "Sr. Director of Digital Marketing, GreatCall"
     current: "Founder and CEO, Yellow Cap Media"
   - text: "Forward-thinking digital marketer."
     name: "Jessica DeFilippo Nenadal"
