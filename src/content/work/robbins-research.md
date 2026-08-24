@@ -13,6 +13,11 @@ metrics:
     label: "in revenue in a 10-day holiday campaign, a 200% year-over-year increase, built on email strategy rather than paid spend"
     citation: "Robbins Research International."
 scope: "Writer and Marketing Communications Lead. Owned the campaign's email strategy and execution."
+quotes:
+  - text: "Aaron is a smart, out-of-the-box thinker, well-read, with an inquiring mind. Whether you're working on a new social media campaign, strategizing on offers or testing new lead generation tactics, he can always be counted on to come up with original ideas and a creative approach to solving marketing problems."
+    name: "Karen Davis"
+    roleAtTime: "Head of Marketing, Robbins Research International"
+    current: "VP Marketing, Entrepreneur, Demand Generator"
 needs:
   - "More detail on the segmentation and offer strategy, if it can be shared"
 ---
