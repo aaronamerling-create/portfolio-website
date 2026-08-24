@@ -39,7 +39,7 @@ export const PERSON_SCHEMA = {
 		'Co-inventor, five U.S. patents, trust-network architecture',
 		'Runner-up, CONNECT Most Innovative Product of the Year, Mobile Apps',
 		'International Communicator Award',
-		'Three International Telly Awards, Digital Advertising',
+		"Three International Telly Awards, Digital Advertising",
 		'Nickelodeon Fellowship',
 		'20th Century Fox New Writers Award',
 	],
@@ -77,37 +77,13 @@ export const LOGO_ROWS: LogoRow[] = [
 				caption: 'VP of Strategy',
 				logo: 'lemonade.png',
 			},
-			{
-				name: 'Team Lewis',
-				caption: 'Managing Director, Digital USA',
-				logo: 'team-lewis.png',
-			},
-			{
-				name: 'Voxox / Telcentris',
-				caption: 'Director of Marketing and Product Innovation',
-				logo: 'voxox.png',
-			},
-			{
-				name: 'GAIN Credit',
-				caption: 'Sr. Manager, Digital Product and Marketing',
-				logo: 'gain-credit.png',
-			},
-			{
-				name: 'Best Buy Health (GreatCall)',
-				caption: 'Sr. Manager, Digital and Mobile Product and Marketing',
-				logo: 'best-buy.svg',
-			},
-			{
-				name: 'Robbins Research International (Tony Robbins)',
-				caption: 'Writer and Marketing Communications Lead',
-				logo: 'tony-robbins.png',
-			},
+			{ name: 'Team Lewis', caption: 'Managing Director, Digital USA', logo: 'team-lewis.png' },
+			{ name: 'Voxox / Telcentris', caption: 'Director of Marketing and Product Innovation', logo: 'voxox.png' },
+			{ name: 'GAIN Credit', caption: 'Sr. Manager, Digital Product and Marketing', logo: 'gain-credit.png' },
+			{ name: 'Best Buy Health (GreatCall)', caption: 'Sr. Manager, Digital and Mobile Product and Marketing', logo: 'best-buy.svg' },
+			{ name: 'Robbins Research International (Tony Robbins)', caption: 'Writer and Marketing Communications Lead', logo: 'tony-robbins.png' },
 			{ name: 'Ziff Davis', caption: 'Marketing Communications Lead', logo: 'ziff-davis.webp' },
-			{
-				name: 'Avatar: The Last Airbender (Nickelodeon)',
-				caption: 'TV Writer, Nickelodeon Fellowship',
-				logo: 'avatar.png',
-			},
+			{ name: 'Avatar: The Last Airbender (Nickelodeon)', caption: 'TV Writer, Nickelodeon Fellowship', logo: 'avatar.png' },
 		],
 	},
 	{
@@ -115,44 +91,16 @@ export const LOGO_ROWS: LogoRow[] = [
 		items: [
 			{ name: 'Disney Games', caption: 'Campaign strategy, via The Lemonade Agency', logo: 'disney.svg' },
 			{ name: 'Meta', caption: 'Marketing strategy, via The Lemonade Agency', logo: 'meta.svg' },
-			{
-				name: 'Ubisoft',
-				caption: 'Launch go-to-market, via The Lemonade Agency',
-				logo: 'ubisoft.svg',
-				large: true,
-			},
-			{
-				name: 'Square Enix',
-				caption: 'Marketing strategy, via The Lemonade Agency',
-				logo: 'square-enix.svg',
-			},
-			{
-				name: 'Dior',
-				caption: 'NFT and crypto brand strategy, via The Lemonade Agency',
-				logo: 'dior.svg',
-			},
-			{
-				name: 'DirecTV',
-				caption: 'Marketing strategy, via The Lemonade Agency',
-				logo: 'directv.svg',
-			},
-			{
-				name: 'The San Francisco Marathon',
-				caption: 'Brand turnaround strategy, via The Lemonade Agency',
-			},
+			{ name: 'Ubisoft', caption: 'Launch go-to-market, via The Lemonade Agency', logo: 'ubisoft.svg', large: true },
+			{ name: 'Square Enix', caption: 'Marketing strategy, via The Lemonade Agency', logo: 'square-enix.svg' },
+			{ name: 'Dior', caption: 'NFT and crypto brand strategy, via The Lemonade Agency', logo: 'dior.svg' },
+			{ name: 'DirecTV', caption: 'Marketing strategy, via The Lemonade Agency', logo: 'directv.svg' },
+			{ name: 'The San Francisco Marathon', caption: 'Brand turnaround strategy, via The Lemonade Agency', logo: 'san-francisco-marathon.png' },
 			{ name: 'VMware', caption: 'Agency team lead, via Team Lewis', logo: 'vmware.svg' },
 			{ name: 'Ripple Labs', caption: 'Agency team lead, via Team Lewis', logo: 'ripple.svg' },
 			{ name: 'Yahoo', caption: 'Branding for Yahoo Current TV, via Scenefour', logo: 'yahoo.svg' },
-			{
-				name: 'Colgate',
-				caption: 'Paid social for a D2C oral care brand, via Amasa Agency',
-				logo: 'colgate.svg',
-			},
-			{
-				name: 'Pardee Homes',
-				caption: 'Print and digital advertising, via Zukor Design',
-				logo: 'pardee-homes.png',
-			},
+			{ name: 'Colgate', caption: 'Paid social for a D2C oral care brand, via Amasa Agency', logo: 'colgate.svg' },
+			{ name: 'Pardee Homes', caption: 'Print and digital advertising, via Zukor Design', logo: 'pardee-homes.png' },
 		],
 	},
 	{
@@ -161,17 +109,8 @@ export const LOGO_ROWS: LogoRow[] = [
 			{ name: 'GoFundMe', caption: 'Early marketing advisor', logo: 'gofundme.svg' },
 			{ name: 'Steno.ai', caption: 'Strategic advisor, Techstars mentor', logo: 'steno-ai.png', large: true },
 			{ name: 'TrendSource', caption: 'Strategic marketing advisor', logo: 'trendsource.png' },
-			{
-				name: 'American Medical Response (AMR)',
-				caption: 'Crisis and search strategy advisor',
-				logo: 'amr.png',
-			},
-			{
-				name: 'Cloudhands (cloudhands.ai)',
-				caption: 'Product & AI Consultant',
-				logo: 'cloudhands.png',
-				large: true,
-			},
+			{ name: 'American Medical Response (AMR)', caption: 'Crisis and search strategy advisor', logo: 'amr.png' },
+			{ name: 'Cloudhands (cloudhands.ai)', caption: 'Product & AI Consultant', logo: 'cloudhands.png', large: true },
 		],
 	},
 ];
@@ -217,7 +156,7 @@ export const TESTIMONIALS: Testimonial[] = [
 	},
 	{
 		quote:
-			"It was my pleasure to work closely with Aaron for over two years at GreatCall. He impressed me immediately with his drive, passion, speed and intelligence, and quickly built strong relationships as he worked across internal teams and external agencies. In his digital marketing role, Aaron transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency, and spearheaded many ideas and projects that quickly grew GreatCall's digital capabilities. Then, with focus on our mobile apps, he managed the teams that brought strategically-important apps to market, gaining us #1 positions in the iTunes and Google Play apps store medical category for not just one, but two of our apps. Aaron is fun to work with, and delivers concrete results. I'd happily recommend him to any company that needs best-in-class digital marketing and app management.",
+			"It was my pleasure to work closely with Aaron for over two years at GreatCall. He impressed me immediately with his drive, passion, speed and intelligence, and quickly built strong relationships as he worked across internal teams and external agencies. In his digital marketing role, Aaron transformed our SEO visibility, grew digital marketing revenue while cutting inefficiency, and spearheaded many ideas and projects that quickly grew GreatCall's digital capabilities. Then, with focus on our mobile apps, he managed the teams that brought strategically-important apps to market, gaining us #1 positions in the iTunes and Google Play apps store medical category for not just one, but two of our apps. Aaron is fun to work with, and delivers concrete results. I'd happily recommend him to any company that needs best-in-class digital marketing and app management.',
 		name: 'Richie Hannah',
 		title: 'Managed Aaron at GreatCall',
 		current: 'Founder and CEO, Yellow Cap Media',
