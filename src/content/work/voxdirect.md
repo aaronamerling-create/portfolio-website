@@ -4,7 +4,7 @@ dek: "The roadmap was chasing feature parity with business-phone platforms. Dire
 client: "Voxox / Telcentris (VoxDirect)"
 order: 10
 whereThingsStood: "VoxDirect was being built and positioned as a virtual phone system for small businesses, adding features to compete head-on with established business-phone platforms."
-theCall: "The obvious move was to keep adding virtual-phone-system features to close the gap with established platforms. I rejected that after running customer outreach directly. Most prospective users were not shopping for a phone system. They wanted the job an answering machine does, done as a modern app: simple, consumer and small-business focused, without the configuration overhead of an enterprise phone tool. I repositioned the product and rebuilt the feature set around that narrower, better-fit use case instead of the original one."
+theCall: "The obvious move was to keep adding virtual-phone-system features to close the gap with established platforms. I set that aside after running customer outreach directly. Most prospective users were not shopping for a phone system. They wanted the job an answering machine does, done as a modern app: simple, consumer and small-business focused, without the configuration overhead of an enterprise phone tool. I repositioned the product and rebuilt the feature set around that narrower, better-fit use case instead of the original one."
 whatGotBuilt:
   - "Ran direct customer outreach that surfaced the actual job customers were hiring the product to do"
   - "Repositioned VoxDirect from a virtual-phone-system competitor to a simple, modern answering-machine replacement for consumers and small businesses"

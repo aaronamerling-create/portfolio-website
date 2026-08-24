@@ -4,7 +4,7 @@ dek: "Search returns a list you compete on. Answer engines return one synthesis 
 client: "Etna Interactive"
 order: 1
 whereThingsStood: "Clients were starting to ask why their brand didn't show up when their customers asked ChatGPT or Perplexity, and traditional SEO reporting had no answer. There was no established playbook for measuring or building toward inclusion in an AI-generated answer."
-theCall: "The obvious move was to treat this as an SEO variant and layer it into existing reporting. I rejected that. Answer engines synthesize a single response instead of ranking a list, which meant the content had to be structured for extraction and citation rather than for ranking, and the measurement had to track presence inside answers rather than position on a page."
+theCall: "The obvious move was to treat this as an SEO variant and layer it into existing reporting. I didn't do that. Answer engines synthesize a single response instead of ranking a list, which meant the content had to be structured for extraction and citation rather than for ranking, and the measurement had to track presence inside answers rather than position on a page."
 whatGotBuilt:
   - "Defined AEO and GEO as a distinct discipline internally, separate from traditional SEO reporting"
   - "Built a content shape suited to extraction and citation by AI answer engines"

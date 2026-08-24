@@ -4,7 +4,7 @@ dek: "GreatCall Labs ran without an executive mandate to build anything. It ran 
 client: "GreatCall (now Best Buy Health)"
 order: 11
 whereThingsStood: "GreatCall was a telecom company selling simple phones to seniors. There was no formal innovation function and no standing mandate for anyone to build outside the existing product roadmap."
-theCall: "The obvious way to get new product ideas funded at a telecom company is to ask leadership for a mandate first. I rejected that. I built GreatCall Labs without waiting for sign-off on scope, ran cheap tests before presenting anything, and brought the CEO and the heads of product and marketing evidence instead of a pitch. That is what got the ideas funded."
+theCall: "The obvious way to get new product ideas funded at a telecom company is to ask leadership for a mandate first. I went a different way. I built GreatCall Labs without waiting for sign-off on scope, ran cheap tests before presenting anything, and brought the CEO and the heads of product and marketing evidence instead of a pitch. That is what got the ideas funded."
 whatGotBuilt:
   - "Founded GreatCall Labs, an internal innovation unit run without formal roadmap authority"
   - "Produced five U.S. patents for a trust-network architecture originally built for emergency response call centers, later assigned to GreatCall / Best Buy Health"

@@ -4,7 +4,7 @@ dek: "A print-and-broadcast brand selling to seniors, repositioned around the ad
 client: "GreatCall (now Best Buy Health)"
 order: 6
 whereThingsStood: "GreatCall relied almost entirely on print and broadcast for awareness, with no proven way to reach its target demographic, older adults, through digital channels, and no non-brand PPC or social content strategy."
-theCall: "The obvious audience to target with digital was the end user: seniors themselves. I rejected that. The people researching and purchasing the product were overwhelmingly the adult children and caregivers of the core demographic, so the digital strategy targeted them directly, with messaging built around health and safety rather than the product spec sheet."
+theCall: "The obvious audience to target with digital was the end user: seniors themselves. I chose not to. The people researching and purchasing the product were overwhelmingly the adult children and caregivers of the core demographic, so the digital strategy targeted them directly, with messaging built around health and safety rather than the product spec sheet."
 whatGotBuilt:
   - "Built the company's first direct-to-consumer digital strategy across PPC, social, content and display"
   - "Targeted the adult children and caregivers of the core demographic instead of the end user"

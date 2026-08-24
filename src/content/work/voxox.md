@@ -4,7 +4,7 @@ dek: "One product suite, two audiences that wanted opposite things. Segmented me
 client: "Voxox / Telcentris (Cloudphone)"
 order: 9
 whereThingsStood: "Muddled messaging across services and target customers, no PPC or affiliate strategy, no B2B lead flow, and low average order value."
-theCall: "The obvious move was one message that tried to serve both the B2B and B2C audiences at once. I rejected that. The two audiences wanted opposite things from the same product suite, so the website and messaging were restructured around distinct customer segments instead of a single blended pitch."
+theCall: "The obvious move was one message that tried to serve both the B2B and B2C audiences at once. I steered away from that. The two audiences wanted opposite things from the same product suite, so the website and messaging were restructured around distinct customer segments instead of a single blended pitch."
 whatGotBuilt:
   - "Restructured the website and messaging around distinct B2B and B2C customer segments"
   - "Built B2B lead automation for SMBs"
