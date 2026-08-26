@@ -15,7 +15,12 @@ metrics:
     label: "landed as flagship customer, giving the company a reference case in a category with no comparables"
     citation: "Steno.ai, Techstars '23. Strategic advisor."
 scope: "Strategic advisor, not an operating role. Met the founders through Techstars, then separately engaged as a strategic advisor: identified the use case and target market, led the engagement that closed the flagship customer, and worked with both companies' teams through launch. The product, the technology, and day-to-day execution were the founding team's."
+quotes:
+  - text: "Aaron was instrumental in our early success and helped us achieve lift-off by connecting us directly with Tony Robbins, one of our first marquee customers."
+    name: "Arman Assadi"
+    roleAtTime: "Founder & CEO, Steno.ai"
+    full: "Aaron was instrumental in our early success and helped us achieve lift-off by connecting us directly with Tony Robbins, one of our first marquee customers. He went well beyond making introductions. Aaron consistently put in the work, advising us on marketing and growth strategy and continuing to create value over time. What stands out most is how he thinks. He brings a direct, no-BS mindset to every conversation, challenges conventional thinking, and often sees opportunities others miss. He also handles high-stakes situations with ease. As a CEO, I found his perspective and willingness to challenge me directly both rare and valuable. I highly recommend Aaron to any team looking for a seasoned pro who will genuinely move the business forward."
+    linkedin: true
 needs:
-  - "Steno.ai founder pull quote"
   - "One honest line on what I'd do differently"
 ---
