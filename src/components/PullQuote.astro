@@ -16,16 +16,20 @@ const { quote, name, roleAtTime, current, full, linkedin = false } = Astro.props
 	<div class="attribution reveal">
 		<p>{name} &middot; {roleAtTime}</p>
 		{current && <span class="now">now: {current}</span>}
-		{linkedin && (
+		{linkedin && !full && (
 			<a class="linkedin" href="https://www.linkedin.com/in/aaronamerling/details/recommendations/" target="_blank">
 				LinkedIn
 			</a>
 		)}
 	</div>
 	{full && (
-		<details>
-			<summary>Read full recommendation</summary>
-			<p>{full}</p>
-		</details>
+		<a
+			class="full-link"
+			href="https://www.linkedin.com/in/aaronamerling/details/recommendations/"
+			target="_blank"
+			rel="noopener"
+		>
+			Read full recommendation on LinkedIn &rarr;
+		</a>
 	)}
 </blockquote>
